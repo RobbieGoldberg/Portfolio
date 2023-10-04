@@ -12,13 +12,13 @@
 	<h2>As both a player and a creator, I have a particular interest in character controls, game physics, and movement systems.</h2>
 </div>
 
-<div class="imagegroup">
+<div class="imagegroup1">
 	<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><img src="images/saleblazers.jpg"></img></a></div>
 	<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><img src="images/bloompunk.png"></img></a></div>
 	<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><img src="images/oxygen_caliber.png"></img></a></div>
 </div>
 
-<div class="imagegroup">
+<div class="imagegroup2">
 	<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><img src="images/bazooka_caverns.png"></img></a></div>
 	<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><img src="images/par_a_dice.png"></img></a></div>
 	<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/upword"><img src="images/upword.png"></img></a></div>
@@ -31,18 +31,66 @@ img {
 	transition: transform .1s;
 	max-width: 100%;
 	border-radius: 8px;
+	z-index: 1;
 }
 
 img:hover {
-	transform: scale(1.5);
+	transform: scale(1.8);
 }
 
 .zoom {
 	padding: 4;
-	margin: 8;
+	margin: 16;
 	width: 25%;
 	height: auto;
 }
+
+.zoom:hover {
+	z-index: 10;
+}
+
+.imagegroup1{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.imagegroup2{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.imagegroup1 .zoom {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+
+	opacity: 0;
+	animation-fill-mode: forwards
+}
+
+.imagegroup2 .zoom {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+
+	opacity: 0;
+	animation-fill-mode: forwards
+}
+
+.imagegroup1 .zoom:nth-child(1) { animation-delay: 0.6s }
+.imagegroup1 .zoom:nth-child(2) { animation-delay: 0.7s }
+.imagegroup1 .zoom:nth-child(3) { animation-delay: 0.8s }
+.imagegroup2 .zoom:nth-child(1) { animation-delay: 0.9s }
+.imagegroup2 .zoom:nth-child(2) { animation-delay: 1s }
+.imagegroup2 .zoom:nth-child(3) { animation-delay: 1.1s }
 
 .header {
 	font-family: "Poppins";
@@ -52,7 +100,7 @@ img:hover {
 	background-color: #333;
 	padding: 15px;
 	padding-bottom: 1.5%;
-	margin-bottom: 2%;
+	margin-bottom: 1.5%;
 	margin-top: 1%;
 	border-radius: 15px;
 	letter-spacing: 2px;
@@ -60,22 +108,67 @@ img:hover {
 	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
+
+	
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1.5s; /* Firefox < 16 */
+        -ms-animation: fadein 1.5s; /* Internet Explorer */
+         -o-animation: fadein 1.5s; /* Opera < 12.1 */
+            animation: fadein 1.5s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromLeft;
 }
 
 h1 {
 	font-size: 40px;
 }
 
-.imagegroup{
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	justify-content: center;
+h2 {
+	font-size: 20px;
 }
 
 body {
 	background-color: #111;
 	min-height: 1000px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 </style>

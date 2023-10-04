@@ -118,6 +118,7 @@ img:hover {
 
 h1 {
 	font-size: 40px;
+	transition: 0.3s;
 }
 
 h2 {
@@ -132,6 +133,8 @@ h2 {
 	animation-delay: 0.7s;
 	opacity: 0;
 	animation-fill-mode: forwards;
+
+	transition: 0.3s;
 }
 
 .mainwindow h2 {
@@ -222,6 +225,15 @@ body {
 }
 .dimImagesHover img:hover {
   opacity: 1;
+}
+
+
+.dimImagesHover.imgHovered h2, .dimImagesHover.imgHovered h1 {
+  transition: 0.2s;
+}
+
+.dimImagesHover.imgHovered h2, .dimImagesHover.imgHovered h1 {
+	color: #ddd2;
 }
 
 </style>

@@ -6,25 +6,27 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
 
-<div class="header">
-	<h1>Hi, I'm Robbie Goldberg</h1>
-	<h2>I'm a game developer with a passion for deep mechanical systems.</h2>
-	<h2>As both a player and a creator, I have a particular interest in character controls, game physics, and movement systems.</h2>
-</div>
+<div class = "dimImagesHover">
+	<div class="header">
+		<h1>Hi, I'm Robbie Goldberg</h1>
+		<h2>I'm a game developer with a passion for deep mechanical systems.</h2>
+		<h2>As both a player and a creator, I have a particular interest in character controls, game physics, and movement systems.</h2>
+	</div>
 
-<div class="mainwindow">
-<h2>Check out my work</h2>
-<div class="imagegroup1">
-	<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><img src="images/saleblazers.jpg"></img></a></div>
-	<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><img src="images/bloompunk.png"></img></a></div>
-	<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><img src="images/oxygen_caliber.png"></img></a></div>
-</div>
+	<div class="mainwindow">
+		<h2>Check out my work</h2>
+		<div class="imagegroup1">
+			<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><img src="images/saleblazers.jpg"></img></a></div>
+			<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><img src="images/bloompunk.png"></img></a></div>
+			<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><img src="images/oxygen_caliber.png"></img></a></div>
+		</div>
 
-<div class="imagegroup2">
-	<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><img src="images/bazooka_caverns.png"></img></a></div>
-	<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><img src="images/par_a_dice.png"></img></a></div>
-	<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/upword"><img src="images/upword.png"></img></a></div>
-</div>
+		<div class="imagegroup2">
+			<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><img src="images/bazooka_caverns.png"></img></a></div>
+			<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><img src="images/par_a_dice.png"></img></a></div>
+			<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/upword"><img src="images/upword.png"></img></a></div>
+		</div>
+	</div>
 </div>
 
 
@@ -33,8 +35,8 @@
 img {
 	transition: transform .1s;
 	max-width: 100%;
-	border-radius: 8px;
 	z-index: 1;
+	border-radius: 8px;
 }
 
 img:hover {
@@ -42,10 +44,9 @@ img:hover {
 }
 
 .zoom {
-	padding: 4;
-	margin: 16;
-	width: 25%;
+	width: 100%;
 	height: auto;
+	margin: 16px;
 }
 
 .zoom:hover {
@@ -54,16 +55,12 @@ img:hover {
 
 .imagegroup1{
 	display: flex;
-	flex-wrap: nowrap;
 	flex-direction: row;
-	justify-content: center;
 }
 
 .imagegroup2{
 	display: flex;
-	flex-wrap: nowrap;
 	flex-direction: row;
-	justify-content: center;
 }
 
 .imagegroup1 .zoom {
@@ -157,6 +154,8 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
 
 	-webkit-animation: fadein 1.5s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1.5s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
@@ -171,7 +170,7 @@ h2 {
 
 body {
 	background-color: #333;
-	min-height: 1000px;
+	min-height: 1100px;
 }
 
 @keyframes fadein {
@@ -215,8 +214,31 @@ body {
   }
 }
 
+.dimImagesHover img {
+  transition: 0.3s;
+}
+.dimImagesHover.imgHovered img {
+  opacity: 0.15;
+}
+.dimImagesHover img:hover {
+  opacity: 1;
+}
+
 </style>
 
 <script type="text/javascript">
+
+var elements = document.getElementsByClassName('dimImagesHover')
+
+for (var i = 0; i < elements.length; i++) {
+  elements[i].onmouseover = function( e ){
+    if(e.target.tagName == 'IMG'){
+      this.classList.add("imgHovered");
+    }
+  }
+  elements[i].onmouseout = function( e ){
+    this.classList.remove("imgHovered");
+  }
+}
 
 </script>

@@ -17,42 +17,52 @@
 		<h2>Check out my work</h2>
 		<div class="imagegroup1">
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><img src="images/saleblazers.jpg"></img></a>
-				<div class="hide">
-					<h3>INFO POPUP</h3>
+				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><div class="imgleft"><img src="images/saleblazers.jpg"></img></div></a>
+				<div class="hideleft">
+					<div class="infopopuptitle">Saleblazers</div>
+					<div class="infopopupdescription">A multiplayer open-world shopkeeping survival game.</div>
+					<div class="infopopupdescription">
+						I was a core engineer on this project leading up to and through its early access release.
+						My contributions to the game include ...
+					</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><img src="images/bloompunk.png"></img></a>
-				<div class="hide">
-					<h3>INFO POPUP</h3>
+				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><div class="imgmiddle"><img src="images/bloompunk.png"></img></div></a>
+				<div class="hidemiddle">
+					<div class="infopopuptitle">Bloompunk</div>
+					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><img src="images/oxygen_caliber.png"></img></a>
-				<div class="hide">
-					<h3>INFO POPUP</h3>
+				<a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><div class="imgright"><img src="images/oxygen_caliber.png"></img></div></a>
+				<div class="hideright">
+					<div class="infopopuptitle">Oxygen Caliber</div>
+					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="imagegroup2">
 			<div class="zoom infopopup">
-				<a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><img src="images/bazooka_caverns.png"></img></a>
-				<div class="hide">
-					<h3>INFO POPUP</h3>
+				<a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><div class="imgleft"><img src="images/bazooka_caverns.png"></img></div></a>
+				<div class="hideleft">
+					<div class="infopopuptitle">Bazooka Caverns</div>
+					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><img src="images/par_a_dice.png"></img></a>
-				<div class="hide">
-					<h3>INFO POPUP</h3>
+				<a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><div class="imgmiddle"><img src="images/par_a_dice.png"></img></div></a>
+				<div class="hidemiddle">
+					<div class="infopopuptitle">Par-a-Dice</div>
+					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" href="https://rjones0421.itch.io/upword"><img src="images/upword.png"></img></a>
-				<div class="hide">
-					<h3>INFO POPUP</h3>
+				<a target="_blank" href="https://rjones0421.itch.io/upword"><div class="imgright"><img src="images/upword.png"></img></div></a>
+				<div class="hideright">
+					<div class="infopopuptitle">UpWord</div>
+					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 		</div>
@@ -62,14 +72,64 @@
 
 <style>
 
-.hide {
+.infopopuptitle
+{
+	font-size: 34;
+}
+
+.infopopupdescription
+{
+	font-size: 20;
+}
+
+.hideleft {
   z-index: 20;
+  padding: 8px;
   display: none;
   position: absolute;
-  left: 1000px;
-  bottom: 100px;
-  width: 40%;
-  height: auto;
+  left: 800px;
+  top: 0;
+  width: 60%;
+  background-color: #333;
+  border-radius: 16px;
+
+	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
+	-ms-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
+	-o-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
+	animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+.hidemiddle {
+  z-index: 20;
+  padding: 8px;
+  display: none;
+  position: absolute;
+  left: 115%;
+  top: 0;
+  width: 60%;
+  background-color: #333;
+  border-radius: 16px;
+
+	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
+	-ms-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
+	-o-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
+	animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+.hideright {
+  z-index: 20;
+  padding: 8px;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 800px;
+  width: 60%;
   background-color: #333;
   border-radius: 16px;
 
@@ -83,7 +143,15 @@
 	animation-fill-mode: forwards;
 }
 
-.infopopup:hover .hide {
+.infopopup:hover .hideleft {
+  display: block;
+  color: #ddd;
+}
+.infopopup:hover .hidemiddle {
+  display: block;
+  color: #ddd;
+}
+.infopopup:hover .hideright {
   display: block;
   color: #ddd;
 }
@@ -96,7 +164,19 @@ img {
 }
 
 img:hover {
-	transform: scale(1.7);
+
+}
+
+.imgleft:hover img {
+	transform: scale(1.7) translate(10%, 0%);
+}
+
+.imgmiddle:hover img {
+	transform: scale(1.7) translate(-15%, 0%);
+}
+
+.imgright:hover img {
+	transform: scale(1.7) translate(-10%, 0%);
 }
 
 .zoom {
@@ -229,7 +309,8 @@ h2 {
 
 body {
 	background-color: #333;
-	min-height: 1100px;
+	min-height: 1150px;
+	overflow-x: hidden;
 }
 
 @keyframes fadein {
@@ -277,7 +358,7 @@ body {
   transition: 0.3s;
 }
 .dimImagesHover.imgHovered img {
-  opacity: 0.15;
+  opacity: 0.1;
 }
 .dimImagesHover img:hover {
   opacity: 1;

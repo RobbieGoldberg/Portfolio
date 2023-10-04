@@ -16,21 +16,77 @@
 	<div class="mainwindow">
 		<h2>Check out my work</h2>
 		<div class="imagegroup1">
-			<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><img src="images/saleblazers.jpg"></img></a></div>
-			<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><img src="images/bloompunk.png"></img></a></div>
-			<div class="zoom"><a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><img src="images/oxygen_caliber.png"></img></a></div>
+			<div class="zoom infopopup">
+				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><img src="images/saleblazers.jpg"></img></a>
+				<div class="hide">
+					<h3>INFO POPUP</h3>
+				</div>
+			</div>
+			<div class="zoom infopopup">
+				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><img src="images/bloompunk.png"></img></a>
+				<div class="hide">
+					<h3>INFO POPUP</h3>
+				</div>
+			</div>
+			<div class="zoom infopopup">
+				<a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><img src="images/oxygen_caliber.png"></img></a>
+				<div class="hide">
+					<h3>INFO POPUP</h3>
+				</div>
+			</div>
 		</div>
 
 		<div class="imagegroup2">
-			<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><img src="images/bazooka_caverns.png"></img></a></div>
-			<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><img src="images/par_a_dice.png"></img></a></div>
-			<div class="zoom"><a target="_blank" href="https://rjones0421.itch.io/upword"><img src="images/upword.png"></img></a></div>
+			<div class="zoom infopopup">
+				<a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><img src="images/bazooka_caverns.png"></img></a>
+				<div class="hide">
+					<h3>INFO POPUP</h3>
+				</div>
+			</div>
+			<div class="zoom infopopup">
+				<a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><img src="images/par_a_dice.png"></img></a>
+				<div class="hide">
+					<h3>INFO POPUP</h3>
+				</div>
+			</div>
+			<div class="zoom infopopup">
+				<a target="_blank" href="https://rjones0421.itch.io/upword"><img src="images/upword.png"></img></a>
+				<div class="hide">
+					<h3>INFO POPUP</h3>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 
 <style>
+
+.hide {
+  z-index: 20;
+  display: none;
+  position: absolute;
+  left: 1000px;
+  bottom: 100px;
+  width: 40%;
+  height: auto;
+  background-color: #333;
+  border-radius: 16px;
+
+	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
+	-ms-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
+	-o-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
+	animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.infopopup:hover .hide {
+  display: block;
+  color: #ddd;
+}
 
 img {
 	transition: transform .1s;
@@ -235,6 +291,7 @@ body {
 .dimImagesHover.imgHovered h2, .dimImagesHover.imgHovered h1 {
 	color: #ddd2;
 }
+
 
 </style>
 

@@ -24,7 +24,7 @@
 					<div class="infopopupdescription">
 						At Airstrafe Interactive, I was a core engineer on this project leading up to and through its early access release.
 						My contributions to the game included large-scale systems like achievement unlocks, text localization, music layer transitions, quests, dialogue, networking behavior [...]
-						as well as broadly-scoped miscellaneous bug fixes and optimizations affecting all systems across the game. In this role [...] skills in picking apart, refactoring, and fixing old code 
+						as well as broadly-scoped bug fixes and optimizations affecting all systems in the game. In this role [...] skills in picking apart, refactoring, and fixing old code 
 						connecting many disparate systems touched by many different people over years of the game's development.
 					</div>
 				</div>
@@ -69,11 +69,14 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	<div class="mainwindow">
 
+	<div class="mainwindow">
+		<h2>Links</h2>
 	</div>
-	-->
+	<div class="mainwindow">
+		<h2>Skills</h2>
+	</div>
+	
 </div>
 
 
@@ -107,6 +110,8 @@
 
 	opacity: 0;
 	animation-fill-mode: forwards;
+
+	pointer-events: none;
 }
 
 .hideleft {
@@ -132,7 +137,6 @@
 img {
 	transition: transform .1s;
 	max-width: 100%;
-	z-index: 1;
 	border-radius: 8px;
 }
 
@@ -247,7 +251,7 @@ h2 {
 }
 
 .mainwindow {
-	
+	z-index: 0;
 	font-family: "Poppins";
 
 	text-align: center;

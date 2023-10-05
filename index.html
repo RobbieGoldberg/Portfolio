@@ -74,7 +74,7 @@
 		</div>
 	</div>
 
-	<div class="gameplayer" id="gameplayer"><iframe id="gameplayeriframe" frameborder="0" src="" allowfullscreen="" width="970" height="670"><a href=""></a></iframe></div>
+	<div class="gameplayer" id="gameplayer"><iframe id="gameplayeriframe" frameborder="0" src="" allowfullscreen=""><a href=""></a></iframe></div>
 
 	<div class ="secondarywindowcontainer">
 		<div class="secondarywindow">
@@ -104,16 +104,10 @@
 <style>
 
 .gameplayer {
-	position: absolute;
-	top: 20%;
-	bottom: 0;
-	left: 25%;
-	right: 25%;
-	width: 51%;
-	height: 71%;
-	border: none;
-	margin: auto;
-	padding: 0;
+	position: fixed;
+	margin:0 auto;
+	left: 20vw;
+	top: 6vh;
 	overflow: hidden;
 	z-index: 999999;
 	display: none;
@@ -128,6 +122,12 @@
 .gameplayer.show{
 	opacity: 1;
 	display: inline-block;
+}
+
+iframe {
+	display: block;
+	width: 60vw;
+	height: 86vh;
 }
 
 a {
@@ -457,10 +457,10 @@ for (var i = 0; i < elementsToClick.length; i++) {
 	elementsToClick[i].addEventListener("click", showGamePlayer);
 }
 
-let oxygenCaliberSrc = "https://itch.io/embed-upload/5720166?color=080014";
-let bazookaCavernsSrc = "https://itch.io/embed-upload/6043313?color=110216";
-let paraDiceSrc = "https://itch.io/embed-upload/6174100?color=0c4100";
-let upWordSrc = "https://itch.io/embed-upload/6208713?color=ffffff";
+let oxygenCaliberSrc = "https://itch.io/embed-upload/5720166?color=000000";
+let bazookaCavernsSrc = "https://itch.io/embed-upload/6043313?color=000000";
+let paraDiceSrc = "https://itch.io/embed-upload/6174100?color=000000";
+let upWordSrc = "https://itch.io/embed-upload/6208713?color=000000";
 
 function showGamePlayer(event){
 	if (event.currentTarget.id === '') return;

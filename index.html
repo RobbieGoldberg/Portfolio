@@ -9,8 +9,8 @@
 <div class = "dimImagesHover">
 	<div class="header">
 		<h1>Hi, I'm Robbie Goldberg</h1>
-		<h2>I'm a game developer with a passion for deep mechanical systems.</h2>
-		<h2>As both a player and a creator, I have a particular interest in character controls, game physics, and movement systems.</h2>
+		<h2>I'm a game developer with a passion for deep mechanics and experience-focused design.</h2>
+		<h2>As both a player and creator, I am particularly interested in character controls, game physics, and movement systems.</h2>
 	</div>
 
 	<div class="mainwindow">
@@ -20,16 +20,18 @@
 				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><div class="imgleft"><img src="images/saleblazers.jpg"></img></div></a>
 				<div class="hideleft">
 					<div class="infopopuptitle">Saleblazers</div>
-					<div class="infopopupdescription">A multiplayer open-world shopkeeping survival game.</div>
+					<div class="infopopupdescription">A multiplayer open-world shopkeeping survival game.</div><br>
 					<div class="infopopupdescription">
-						I was a core engineer on this project leading up to and through its early access release.
-						My contributions to the game include ...
+						At Airstrafe Interactive, I was a core engineer on this project leading up to and through its early access release.
+						My contributions to the game included large-scale systems like achievement unlocks, text localization, music layer transitions, quests, dialogue, networking behavior [...]
+						as well as broadly-scoped miscellaneous bug fixes and optimizations affecting all systems across the game. In this role [...] skills in picking apart, refactoring, and fixing old code 
+						connecting many disparate systems touched by many different people over years of the game's development.
 					</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
 				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><div class="imgmiddle"><img src="images/bloompunk.png"></img></div></a>
-				<div class="hidemiddle">
+				<div class="hidemiddletop">
 					<div class="infopopuptitle">Bloompunk</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
@@ -53,7 +55,7 @@
 			</div>
 			<div class="zoom infopopup">
 				<a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><div class="imgmiddle"><img src="images/par_a_dice.png"></img></div></a>
-				<div class="hidemiddle">
+				<div class="hidemiddlebottom">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
@@ -67,6 +69,11 @@
 			</div>
 		</div>
 	</div>
+	<!--
+	<div class="mainwindow">
+
+	</div>
+	-->
 </div>
 
 
@@ -74,7 +81,7 @@
 
 .infopopuptitle
 {
-	font-size: 34;
+	font-size: 48;
 }
 
 .infopopupdescription
@@ -82,16 +89,15 @@
 	font-size: 20;
 }
 
-.hideleft {
-  z-index: 20;
-  padding: 12px;
-  display: none;
-  position: absolute;
-  left: 160%;
-  top: 0;
-  width: 60%;
-  background-color: #333;
-  border-radius: 16px;
+.hideleft, .hidemiddletop, .hidemiddlebottom, .hideright {
+	z-index: 20;
+	padding: 12px;
+	display: none;
+	position: absolute;
+	top: -30%;
+	width: 150%;
+	background-color: #6669;
+	border-radius: 16px;
 
 	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
@@ -102,56 +108,23 @@
 	opacity: 0;
 	animation-fill-mode: forwards;
 }
-.hidemiddle {
-  z-index: 20;
-  padding: 12px;
-  display: none;
-  position: absolute;
-  left: 115%;
-  top: 0;
-  width: 60%;
-  background-color: #333;
-  border-radius: 16px;
 
-	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
-	-ms-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
-	-o-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
-	animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
-
-	opacity: 0;
-	animation-fill-mode: forwards;
+.hideleft {
+	left: 160%;
+}
+.hidemiddletop {
+	top: 143%;
+	left: -25%;
+}
+.hidemiddlebottom {
+	top: -90%;
+	left: -27%;
 }
 .hideright {
-  z-index: 20;
-  padding: 12px;
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 160%;
-  width: 60%;
-  background-color: #333;
-  border-radius: 16px;
-
-	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
-	-ms-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
-	-o-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
-	animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
-
-	opacity: 0;
-	animation-fill-mode: forwards;
+	right: 160%;
 }
 
-.infopopup:hover .hideleft {
-  display: block;
-  color: #ddd;
-}
-.infopopup:hover .hidemiddle {
-  display: block;
-  color: #ddd;
-}
-.infopopup:hover .hideright {
+.infopopup:hover .hideleft, .infopopup:hover .hidemiddletop, .infopopup:hover .hidemiddlebottom, .infopopup:hover .hideright {
   display: block;
   color: #ddd;
 }
@@ -163,16 +136,12 @@ img {
 	border-radius: 8px;
 }
 
-img:hover {
-
-}
-
 .imgleft:hover img {
 	transform: scale(1.7) translate(10%, 0%);
 }
 
 .imgmiddle:hover img {
-	transform: scale(1.7) translate(-15%, 0%);
+	transform: scale(1.7);
 }
 
 .imgright:hover img {
@@ -292,6 +261,7 @@ h2 {
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 2%;
 	padding-bottom: 30px;
 	padding-left: 30px;
 	padding-right: 30px;

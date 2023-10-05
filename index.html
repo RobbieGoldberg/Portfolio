@@ -70,10 +70,10 @@
 		</div>
 	</div>
 
-	<div class="mainwindow">
+	<div class="secondarywindow">
 		<h2>Links</h2>
 	</div>
-	<div class="mainwindow">
+	<div class="secondarywindow">
 		<h2>Skills</h2>
 	</div>
 	
@@ -246,12 +246,11 @@ h2 {
 	transition: 0.3s;
 }
 
-.mainwindow h2 {
+.mainwindow h2, .secondarywindow h2 {
 	animation-delay: 1.2s;
 }
 
-.mainwindow {
-	z-index: 0;
+.mainwindow, .secondarywindow {
 	font-family: "Poppins";
 
 	text-align: center;
@@ -279,6 +278,12 @@ h2 {
 	animation-delay: 1.3s;
 	opacity: 0;
 	animation-fill-mode: forwards;
+}
+
+.secondarywindow
+{
+	position: relative;
+	z-index: -1;
 }
 
 body {

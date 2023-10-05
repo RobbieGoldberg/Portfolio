@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
 
+<body id="body">
 <div id="blocker"></div>
 
 <div class = "dimImagesHover">
@@ -40,7 +41,7 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://robbiegoldberg.itch.io/oxygen-caliber"><div class="imgright"><img src="images/oxygen_caliber.png"></img></div></a>
+				<div class="imgright"><img id="oxygencaliber" src="images/oxygen_caliber.png"></img></div>
 				<div class="hideright">
 					<div class="infopopuptitle">Oxygen Caliber</div>
 					<div class="infopopupdescription">Info</div>
@@ -50,21 +51,21 @@
 
 		<div class="imagegroup2">
 			<div class="zoom infopopup">
-				<a target="_blank" href="https://rjones0421.itch.io/bazooka-caverns"><div class="imgleft"><img src="images/bazooka_caverns.png"></img></div></a>
+				<div class="imgleft"><img id="bazookacaverns" src="images/bazooka_caverns.png"></img></div>
 				<div class="hideleft">
 					<div class="infopopuptitle">Bazooka Caverns</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" href="https://rjones0421.itch.io/par-a-dice"><div class="imgmiddle"><img src="images/par_a_dice.png"></img></div></a>
+				<div class="imgmiddle"><img id="paradice" src="images/par_a_dice.png"></img></div>
 				<div class="hidemiddlebottom">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" href="https://rjones0421.itch.io/upword"><div class="imgright"><img src="images/upword.png"></img></div></a>
+				<div class="imgright"><img id="upword" src="images/upword.png"></img></div>
 				<div class="hideright">
 					<div class="infopopuptitle">UpWord</div>
 					<div class="infopopupdescription">Info</div>
@@ -72,6 +73,8 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="gameplayer" id="gameplayer"><iframe id="gameplayeriframe" frameborder="0" src="" allowfullscreen="" width="970" height="670"><a href=""></a></iframe></div>
 
 	<div class ="secondarywindowcontainer">
 		<div class="secondarywindow">
@@ -96,9 +99,36 @@
 	</div>
 	
 </div>
-
+</body>
 
 <style>
+
+.gameplayer {
+	position: fixed;
+	top: 15%;
+	bottom: 10%;
+	left: 25%;
+	right: 25%;
+	width: 51%;
+	height: 71%;
+	border: none;
+	margin: auto;
+	padding: 0;
+	overflow: hidden;
+	z-index: 999999;
+	display: none;
+
+	-webkit-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
+	-ms-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
+	-o-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
+	animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+}
+
+.gameplayer.show{
+	opacity: 1;
+	display: inline-block;
+}
 
 a {
 	transition: 0.2s;
@@ -162,6 +192,7 @@ img {
 	transition: transform .1s;
 	max-width: 100%;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 .imgleft:hover img {
@@ -382,13 +413,26 @@ body {
 	right:0;
 	bottom:0;
 	z-index:9999;
+}
+
+ .coloredblocker {
+	 background-color: #111d;
  }
+
+ .lockscreen {
+    overflow: hidden;
+}
 
 </style>
 
 <script type="text/javascript">
 
 var elements = document.getElementsByClassName('dimImagesHover')
+
+var blocker = document.getElementById('blocker');
+blocker.addEventListener("click", hideGamePlayer);
+
+var body = document.getElementById('body');
 
 for (var i = 0; i < elements.length; i++) {
   elements[i].onmouseover = function( e ){
@@ -402,7 +446,51 @@ for (var i = 0; i < elements.length; i++) {
 }
 
 setTimeout(function () {
-    document.getElementById('blocker').remove();
+    blocker.style.display = 'none';
 }, 2500);
 
+var elementsToClick = document.querySelectorAll("img");
+var gamePlayer = document.querySelector(".gameplayer");
+var gamePlayerIFrame = document.querySelector("#gameplayeriframe");
+
+for (var i = 0; i < elementsToClick.length; i++) {
+	elementsToClick[i].addEventListener("click", showGamePlayer);
+}
+
+let oxygenCaliberSrc = "https://itch.io/embed-upload/5720166?color=080014";
+let bazookaCavernsSrc = "https://itch.io/embed-upload/6043313?color=110216";
+let paraDiceSrc = "https://itch.io/embed-upload/6174100?color=0c4100";
+let upWordSrc = "https://itch.io/embed-upload/6208713?color=ffffff";
+
+function showGamePlayer(event){
+	if (event.currentTarget.id === '') return;
+
+	gamePlayer.classList.add("show");
+	blocker.classList.add("coloredblocker");
+	blocker.style.display = 'block';
+	body.classList.add("lockscreen");
+
+	let gameSrcString = '';
+	if (event.currentTarget.id === "oxygencaliber")
+		gameSrcString = oxygenCaliberSrc;
+	else if (event.currentTarget.id === "bazookacaverns")
+		gameSrcString = bazookaCavernsSrc;
+	else if (event.currentTarget.id === "paradice")
+		gameSrcString = paraDiceSrc;
+	else if (event.currentTarget.id === "upword")
+		gameSrcString = upWordSrc;
+
+	gamePlayerIFrame.setAttribute("src", gameSrcString);
+}
+
+function hideGamePlayer(){
+	if (gamePlayer.classList.contains("show"))
+	{
+		body.classList.remove("lockscreen");
+		gamePlayer.classList.remove("show");
+		blocker.style.display = 'none';
+		blocker.classList.remove("coloredblocker");
+
+	}
+}
 </script>

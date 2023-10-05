@@ -483,14 +483,25 @@ function showGamePlayer(event){
 	gamePlayerIFrame.setAttribute("src", gameSrcString);
 }
 
+function resetGamePlayer(){
+	gamePlayer.classList.add("show");
+	blocker.classList.add("coloredblocker");
+	blocker.style.display = 'block';
+	body.classList.add("lockscreen");
+
+	gamePlayerIFrame.setAttribute("src", "bazookacaverns");
+	
+	body.classList.remove("lockscreen");
+	gamePlayer.classList.remove("show");
+	blocker.style.display = 'none';
+	blocker.classList.remove("coloredblocker");
+}
+
+
 function hideGamePlayer(){
 	if (gamePlayer.classList.contains("show"))
 	{
-		body.classList.remove("lockscreen");
-		gamePlayer.classList.remove("show");
-		blocker.style.display = 'none';
-		blocker.classList.remove("coloredblocker");
-
+		resetGamePlayer();
 	}
 }
 </script>

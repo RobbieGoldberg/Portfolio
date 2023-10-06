@@ -41,7 +41,11 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><div class="imgright" id="bloompunk"><img src="images/bloompunk.png"></img></div></a>
+				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><div class="imgright" id="bloompunk">
+					<img class="altimg firstaltimage" src="images/bloompunk.png"></img>
+					<img class="altimg" src="images/bloompunk_1.png"></img>
+					<img class="altimg" src="images/bloompunk_2.png"></img>
+				</div></a>
 				<div class="hideright">
 					<div class="infopopuptitle">Bloompunk</div>
 					<div class="infopopupdescription">A roguelike first-person arena shooter</div>
@@ -553,53 +557,28 @@ blocker.addEventListener("click", hideGamePlayer);
 
 var body = document.getElementById('body');
 
-let imageIndex = 0;
-let imageIndexIntervalId;
-let altimages = document.querySelectorAll("#saleblazers .altimg");
+let saleblazersImageIndex = 0;
+let saleblazersImageIndexIntervalId;
+let saleblazersAltimages = document.querySelectorAll("#saleblazers .altimg");
+let saleblazersFadeTimeoutId;
+let saleblazersClearFadeTimeoutId;
 
-let fadeTimeoutId;
-let clearFadeTimeoutId;
+let bloompunkImageIndex = 0;
+let bloompunkImageIndexIntervalId;
+let bloompunkAltimages = document.querySelectorAll("#bloompunk .altimg");
+let bloompunkFadeTimeoutId;
+let bloompunkClearFadeTimeoutId;
 
 for (var i = 0; i < elements.length; i++) {
 	elements[i].onmouseover = function( e ){
 		if(e.target.tagName == 'IMG'){
 		this.classList.add("imgHovered");
 
-		e.target.classList.add("activeImage");
-
 		if (e.target.parentElement.id == "saleblazers"){
-			clearTimeout(fadeTimeoutId);
-			fadeTimeoutId = null;
-			clearTimeout(clearFadeTimeoutId);
-			clearFadeTimeoutId = null;
-
-			fadeTimeoutId = setTimeout(() => {
-				if (e.target.classList.contains("activeImage"))
-				{
-					e.target.classList.add("fadeoutclass");
-				}}, 5000);
-
-			clearFadeTimeoutId = setTimeout(() => {
-				if (e.target.classList.contains("activeImage"))
-				{
-					e.target.classList.remove("fadeoutclass");
-				}
-			}, 6000);
-
-			imageIndexIntervalId = setInterval(() => {
-				imageIndex++;
-				let index = imageIndex%5;
-			
-				altimages[index].style.display = "block";
-
-				altimages[((index-1) + 5)%5].style.display = "none";
-
-				if (e.target.classList.contains("firstaltimage"))
-				{
-					e.target.classList.remove("firstaltimage");
-				}
-
-			}, 6000);
+			cycleImages(e, "saleblazers");
+		}
+		else if  (e.target.parentElement.id == "bloompunk"){
+			cycleImages(e, "bloompunk");
 		}
     }
   }
@@ -607,9 +586,84 @@ for (var i = 0; i < elements.length; i++) {
 	if (!e.target.classList.contains("activeImage")) return;
 	e.target.classList.remove("activeImage");
 	this.classList.remove("imgHovered");
-	clearInterval(imageIndexIntervalId);
-	imageIndexIntervalId = null;
+	clearInterval(saleblazersImageIndexIntervalId);
+	saleblazersImageIndexIntervalId = null;
+	clearInterval(bloompunkImageIndexIntervalId);
+	bloompunkImageIndexIntervalId = null;
   }
+}
+
+function cycleImages(e, game) {
+	e.target.classList.add("activeImage");
+
+	if (game === "saleblazers")
+	{
+		clearTimeout(saleblazersFadeTimeoutId);
+		saleblazersFadeTimeoutId = null;
+		clearTimeout(saleblazersClearFadeTimeoutId);
+		saleblazersClearFadeTimeoutId = null;
+
+		saleblazersFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.add("fadeoutclass");
+			}}, 3500);
+
+		saleblazersClearFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.remove("fadeoutclass");
+			}
+		}, 4500);
+
+		saleblazersImageIndexIntervalId = setInterval(() => {
+		saleblazersImageIndex++;
+		let index = saleblazersImageIndex%5;
+			
+		saleblazersAltimages[index].style.display = "block";
+		saleblazersAltimages[((index-1) + 5)%5].style.display = "none";
+
+		if (e.target.classList.contains("firstaltimage"))
+		{
+			e.target.classList.remove("firstaltimage");
+		}
+
+		}, 4500);
+	}
+	else if (game === "bloompunk")
+	{
+		clearTimeout(bloompunkFadeTimeoutId);
+		bloompunkFadeTimeoutId = null;
+		clearTimeout(bloompunkClearFadeTimeoutId);
+		bloompunkClearFadeTimeoutId = null;
+
+		bloompunkFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.add("fadeoutclass");
+			}}, 3500);
+
+		bloompunkClearFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.remove("fadeoutclass");
+			}
+		}, 4500);
+
+		bloompunkImageIndexIntervalId = setInterval(() => {
+		bloompunkImageIndex++;
+		let index = bloompunkImageIndex%3;
+			
+		bloompunkAltimages[index].style.display = "block";
+		bloompunkAltimages[((index-1) + 3)%3].style.display = "none";
+
+		if (e.target.classList.contains("firstaltimage"))
+		{
+			e.target.classList.remove("firstaltimage");
+		}
+
+		}, 4500);
+	}
 }
 
 setTimeout(function () {

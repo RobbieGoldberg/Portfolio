@@ -45,6 +45,7 @@
 					<img class="altimg firstaltimage" src="images/bloompunk.png"></img>
 					<img class="altimg" src="images/bloompunk_1.png"></img>
 					<img class="altimg" src="images/bloompunk_2.png"></img>
+					<img class="altimg" src="images/bloompunk_3.png"></img>
 				</div></a>
 				<div class="hideright">
 					<div class="infopopuptitle">Bloompunk</div>
@@ -574,17 +575,13 @@ for (var i = 0; i < elements.length; i++) {
 		if(e.target.tagName == 'IMG'){
 		this.classList.add("imgHovered");
 
-		if (e.target.parentElement.id == "saleblazers"){
-			cycleImages(e, "saleblazers");
-		}
-		else if  (e.target.parentElement.id == "bloompunk"){
-			cycleImages(e, "bloompunk");
-		}
+		cycleImages(e, e.target.parentElement.id);
     }
   }
   elements[i].onmouseout = function( e ){
 	if (!e.target.classList.contains("activeImage")) return;
 	e.target.classList.remove("activeImage");
+	e.target.classList.remove("fadeoutclass");
 	this.classList.remove("imgHovered");
 	clearInterval(saleblazersImageIndexIntervalId);
 	saleblazersImageIndexIntervalId = null;
@@ -598,6 +595,8 @@ function cycleImages(e, game) {
 
 	if (game === "saleblazers")
 	{
+		let numimages = 5;
+
 		clearTimeout(saleblazersFadeTimeoutId);
 		saleblazersFadeTimeoutId = null;
 		clearTimeout(saleblazersClearFadeTimeoutId);
@@ -614,14 +613,14 @@ function cycleImages(e, game) {
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 4500);
+		}, 5500);
 
 		saleblazersImageIndexIntervalId = setInterval(() => {
 		saleblazersImageIndex++;
-		let index = saleblazersImageIndex%5;
+		let index = saleblazersImageIndex%numimages;
 			
 		saleblazersAltimages[index].style.display = "block";
-		saleblazersAltimages[((index-1) + 5)%5].style.display = "none";
+		saleblazersAltimages[((index-1) + numimages)%numimages].style.display = "none";
 
 		if (e.target.classList.contains("firstaltimage"))
 		{
@@ -632,6 +631,8 @@ function cycleImages(e, game) {
 	}
 	else if (game === "bloompunk")
 	{
+		let numimages = 4;
+
 		clearTimeout(bloompunkFadeTimeoutId);
 		bloompunkFadeTimeoutId = null;
 		clearTimeout(bloompunkClearFadeTimeoutId);
@@ -648,14 +649,14 @@ function cycleImages(e, game) {
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 4500);
+		}, 5500);
 
 		bloompunkImageIndexIntervalId = setInterval(() => {
 		bloompunkImageIndex++;
-		let index = bloompunkImageIndex%3;
+		let index = bloompunkImageIndex%numimages;
 			
 		bloompunkAltimages[index].style.display = "block";
-		bloompunkAltimages[((index-1) + 3)%3].style.display = "none";
+		bloompunkAltimages[((index-1) + numimages)%numimages].style.display = "none";
 
 		if (e.target.classList.contains("firstaltimage"))
 		{

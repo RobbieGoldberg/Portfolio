@@ -641,6 +641,10 @@ for (var i = 0; i < elements.length; i++) {
   }
 }
 
+let cycletime = 4500;
+let fadekickintime = cycletime - 1000;
+let fadecleartime = cycletime + 500;
+
 function cycleImages(e, game) {
 	e.target.classList.add("activeImage");
 
@@ -657,14 +661,14 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-			}}, 3500);
+			}}, fadekickintime);
 
 		saleblazersClearFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 5000);
+		}, fadecleartime);
 
 		saleblazersImageIndexIntervalId = setInterval(() => {
 		saleblazersImageIndex++;
@@ -678,7 +682,7 @@ function cycleImages(e, game) {
 			e.target.classList.remove("firstaltimage");
 		}
 
-		}, 4500);
+		}, cycletime);
 	}
 	else if (game === "bloompunk")
 	{
@@ -693,14 +697,14 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-			}}, 3500);
+			}}, fadekickintime);
 
 		bloompunkClearFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 5000);
+		}, fadecleartime);
 
 		bloompunkImageIndexIntervalId = setInterval(() => {
 		bloompunkImageIndex++;
@@ -714,7 +718,7 @@ function cycleImages(e, game) {
 			e.target.classList.remove("firstaltimage");
 		}
 
-		}, 4500);
+		}, cycletime);
 	}
 	else if (game === "oxygencaliber")
 	{
@@ -729,14 +733,14 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-			}}, 3500);
+			}}, fadekickintime);
 
 		oxygencaliberClearFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 5000);
+		}, fadecleartime);
 
 		oxygencaliberImageIndexIntervalId = setInterval(() => {
 		oxygencaliberImageIndex++;
@@ -750,7 +754,7 @@ function cycleImages(e, game) {
 			e.target.classList.remove("firstaltimage");
 		}
 
-		}, 4500);
+		}, cycletime);
 	}
 	else if (game === "bazookacaverns")
 	{
@@ -765,14 +769,14 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-			}}, 3500);
+			}}, fadekickintime);
 
 		bazookacavernsClearFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 5000);
+		}, fadecleartime);
 
 		bazookacavernsImageIndexIntervalId = setInterval(() => {
 		bazookacavernsImageIndex++;
@@ -786,7 +790,7 @@ function cycleImages(e, game) {
 			e.target.classList.remove("firstaltimage");
 		}
 
-		}, 4500);
+		}, cycletime);
 	}
 	else if (game === "paradice")
 	{
@@ -801,14 +805,14 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-			}}, 3500);
+			}}, fadekickintime);
 
 		paradiceClearFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 5000);
+		}, fadecleartime);
 
 		paradiceImageIndexIntervalId = setInterval(() => {
 		paradiceImageIndex++;
@@ -822,7 +826,7 @@ function cycleImages(e, game) {
 			e.target.classList.remove("firstaltimage");
 		}
 
-		}, 4500);
+		}, cycletime);
 	}
 	else if (game === "upword")
 	{
@@ -837,14 +841,14 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-			}}, 3500);
+			}}, fadekickintime);
 
 		upwordClearFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.remove("fadeoutclass");
 			}
-		}, 5000);
+		}, fadecleartime);
 
 		upwordImageIndexIntervalId = setInterval(() => {
 		upwordImageIndex++;
@@ -858,7 +862,7 @@ function cycleImages(e, game) {
 			e.target.classList.remove("firstaltimage");
 		}
 
-		}, 4500);
+		}, cycletime);
 	}
 }
 

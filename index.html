@@ -57,15 +57,15 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<div class="imgright"><img id="bazookacaverns" src="images/bazooka_caverns.png"></img></div>
-				<div class="hideright">
+				<div class="imgleftmid"><img id="bazookacaverns" src="images/bazooka_caverns.png"></img></div>
+				<div class="hideleft hideleftmid">
 					<div class="infopopuptitle">Bazooka Caverns</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<div class="imgleft"><img id="paradice" src="images/par_a_dice.png"></img></div>
-				<div class="hideleft">
+				<div class="imgrightmid"><img id="paradice" src="images/par_a_dice.png"></img></div>
+				<div class="hideright hiderightmid">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
@@ -187,12 +187,22 @@ a {
 }
 
 .imagegroup2 .hideleft {
-	left: 130%;
+	left: 200%;
 	top: 20%;
 }
 
 .imagegroup2 .hideright {
-	right: 130%;
+	right: 200%;
+	top: 20%;
+}
+
+.imagegroup2 .hideleftmid {
+	left: 175%;
+	top: 20%;
+}
+
+.imagegroup2 .hiderightmid {
+	right: 175%;
 	top: 20%;
 }
 
@@ -215,17 +225,29 @@ img {
 }
 
 .imagegroup2 .zoom {
-	width: 35%;
+	width: 23%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.imagegroup1 .imgright:hover img, .imagegroup1 .imgleft:hover img {
-	transform: scale(1.3);
+.imagegroup1 .imgright:hover img {
+	transform: scale(1.3) translate(-5%, 0%);
+}
+.imagegroup1 .imgleft:hover img {
+	transform: scale(1.3) translate(5%, 0%);
 }
 
-.imagegroup2 .imgright:hover img, .imagegroup2 .imgleft:hover img {
-	transform: scale(1.5);
+.imagegroup2 .imgright:hover img {
+	transform: scale(2.2) translate(-10%, 0%);
+}
+.imagegroup2 .imgleft:hover img {
+	transform: scale(2.2) translate(10%, 0%);
+}
+.imagegroup2 .imgrightmid:hover img {
+	transform: scale(2.2);
+}
+.imagegroup2 .imgleftmid:hover img {
+	transform: scale(2.2);
 }
 
 .zoom {

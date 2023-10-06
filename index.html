@@ -62,7 +62,14 @@
 		<h2>These four can be played right here in this webpage. Click to play.</h2>
 		<div class="imagegroup2">
 			<div class="zoom infopopup">
-				<div class="imgleft"><img id="oxygencaliber" src="images/oxygen_caliber.png"></img></div>
+				<div class="imgleft" id="oxygencaliber">
+					<img class="oxygencaliber altimg firstaltimage" id="oc1" src="images/oxygen_caliber.png"></img>
+					<img class="oxygencaliber altimg" id="oc2" src="images/oxygen_caliber_1.png"></img>
+					<img class="oxygencaliber altimg" id="oc3" src="images/oxygen_caliber_2.png"></img>
+					<img class="oxygencaliber altimg" id="oc4" src="images/oxygen_caliber_3.jpg"></img>
+					<img class="oxygencaliber altimg" id="oc5" src="images/oxygen_caliber_4.jpg"></img>
+					<img class="oxygencaliber altimg" id="oc6" src="images/oxygen_caliber_5.jpg"></img>
+				</div>
 				<div class="hideleft">
 					<div class="infopopuptitle">Oxygen Caliber</div>
 					<div class="infopopupdescription">Info</div>
@@ -73,7 +80,12 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<div class="imgleftmid"><img id="bazookacaverns" src="images/bazooka_caverns.png"></img></div>
+				<div class="imgleftmid" id="bazookacaverns">
+					<img class="bazookacaverns altimg firstaltimage" id="bc1" src="images/bazooka_caverns.png"></img>
+					<img class="bazookacaverns altimg" id="bc2" src="images/bazooka_caverns_1.png"></img>
+					<img class="bazookacaverns altimg" id="bc2" src="images/bazooka_caverns_2.png"></img>
+					<img class="bazookacaverns altimg" id="bc3" src="images/bazooka_caverns_3.png"></img>
+				</div>
 				<div class="hideleft hideleftmid">
 					<div class="infopopuptitle">Bazooka Caverns</div>
 					<div class="infopopupdescription">Info</div>
@@ -84,7 +96,10 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<div class="imgrightmid"><img id="paradice" src="images/par_a_dice.png"></img></div>
+				<div class="imgrightmid" id="paradice">
+					<img class="paradice altimg firstaltimage" id="pd1" src="images/par_a_dice.png"></img>
+					<img class="paradice altimg" id="pd2" src="images/paradice_1.png"></img>
+				</div>
 				<div class="hideright hiderightmid">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Info</div>
@@ -95,7 +110,11 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<div class="imgright"><img id="upword" src="images/upword.png"></img></div>
+				<div class="imgright" id="upword">
+					<img class="upword altimg firstaltimage" id="uw1" src="images/upword.png"></img>
+					<img class="upword altimg" id="uw2" src="images/upword_1.png"></img>
+					<img class="upword altimg" id="uw3" src="images/upword_2.png"></img>
+				</div>
 				<div class="hideright">
 					<div class="infopopuptitle">UpWord</div>
 					<div class="infopopupdescription">Info</div>
@@ -570,6 +589,30 @@ let bloompunkAltimages = document.querySelectorAll("#bloompunk .altimg");
 let bloompunkFadeTimeoutId;
 let bloompunkClearFadeTimeoutId;
 
+let oxygencaliberImageIndex = 0;
+let oxygencaliberImageIndexIntervalId;
+let oxygencaliberAltimages = document.querySelectorAll("#oxygencaliber .altimg");
+let oxygencaliberFadeTimeoutId;
+let oxygencaliberClearFadeTimeoutId;
+
+let bazookacavernsImageIndex = 0;
+let bazookacavernsImageIndexIntervalId;
+let bazookacavernsAltimages = document.querySelectorAll("#bazookacaverns .altimg");
+let bazookacavernsFadeTimeoutId;
+let bazookacavernsClearFadeTimeoutId;
+
+let paradiceImageIndex = 0;
+let paradiceImageIndexIntervalId;
+let paradiceAltimages = document.querySelectorAll("#paradice .altimg");
+let paradiceFadeTimeoutId;
+let paradiceClearFadeTimeoutId;
+
+let upwordImageIndex = 0;
+let upwordImageIndexIntervalId;
+let upwordAltimages = document.querySelectorAll("#upword .altimg");
+let upwordFadeTimeoutId;
+let upwordClearFadeTimeoutId;
+
 for (var i = 0; i < elements.length; i++) {
 	elements[i].onmouseover = function( e ){
 		if(e.target.tagName == 'IMG'){
@@ -587,6 +630,14 @@ for (var i = 0; i < elements.length; i++) {
 	saleblazersImageIndexIntervalId = null;
 	clearInterval(bloompunkImageIndexIntervalId);
 	bloompunkImageIndexIntervalId = null;
+	clearInterval(oxygencaliberImageIndexIntervalId);
+	oxygencaliberImageIndexIntervalId = null;
+	clearInterval(bazookacavernsImageIndexIntervalId);
+	bazookacavernsImageIndexIntervalId = null;
+	clearInterval(paradiceImageIndexIntervalId);
+	paradiceImageIndexIntervalId = null;
+	clearInterval(upwordImageIndexIntervalId);
+	upwordImageIndexIntervalId = null;
   }
 }
 
@@ -665,6 +716,150 @@ function cycleImages(e, game) {
 
 		}, 4500);
 	}
+	else if (game === "oxygencaliber")
+	{
+		let numimages = 6;
+
+		clearTimeout(oxygencaliberFadeTimeoutId);
+		oxygencaliberFadeTimeoutId = null;
+		clearTimeout(oxygencaliberClearFadeTimeoutId);
+		oxygencaliberClearFadeTimeoutId = null;
+
+		oxygencaliberFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.add("fadeoutclass");
+			}}, 3500);
+
+		oxygencaliberClearFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.remove("fadeoutclass");
+			}
+		}, 5000);
+
+		oxygencaliberImageIndexIntervalId = setInterval(() => {
+		oxygencaliberImageIndex++;
+		let index = oxygencaliberImageIndex%numimages;
+			
+		oxygencaliberAltimages[index].style.display = "block";
+		oxygencaliberAltimages[((index-1) + numimages)%numimages].style.display = "none";
+
+		if (e.target.classList.contains("firstaltimage"))
+		{
+			e.target.classList.remove("firstaltimage");
+		}
+
+		}, 4500);
+	}
+	else if (game === "bazookacaverns")
+	{
+		let numimages = 4;
+
+		clearTimeout(bazookacavernsFadeTimeoutId);
+		bazookacavernsFadeTimeoutId = null;
+		clearTimeout(bazookacavernsClearFadeTimeoutId);
+		bazookacavernsClearFadeTimeoutId = null;
+
+		bazookacavernsFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.add("fadeoutclass");
+			}}, 3500);
+
+		bazookacavernsClearFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.remove("fadeoutclass");
+			}
+		}, 5000);
+
+		bazookacavernsImageIndexIntervalId = setInterval(() => {
+		bazookacavernsImageIndex++;
+		let index = bazookacavernsImageIndex%numimages;
+			
+		bazookacavernsAltimages[index].style.display = "block";
+		bazookacavernsAltimages[((index-1) + numimages)%numimages].style.display = "none";
+
+		if (e.target.classList.contains("firstaltimage"))
+		{
+			e.target.classList.remove("firstaltimage");
+		}
+
+		}, 4500);
+	}
+	else if (game === "paradice")
+	{
+		let numimages = 2;
+
+		clearTimeout(paradiceFadeTimeoutId);
+		paradiceFadeTimeoutId = null;
+		clearTimeout(paradiceClearFadeTimeoutId);
+		paradiceClearFadeTimeoutId = null;
+
+		paradiceFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.add("fadeoutclass");
+			}}, 3500);
+
+		paradiceClearFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.remove("fadeoutclass");
+			}
+		}, 5000);
+
+		paradiceImageIndexIntervalId = setInterval(() => {
+		paradiceImageIndex++;
+		let index = paradiceImageIndex%numimages;
+			
+		paradiceAltimages[index].style.display = "block";
+		paradiceAltimages[((index-1) + numimages)%numimages].style.display = "none";
+
+		if (e.target.classList.contains("firstaltimage"))
+		{
+			e.target.classList.remove("firstaltimage");
+		}
+
+		}, 4500);
+	}
+	else if (game === "upword")
+	{
+		let numimages = 3;
+
+		clearTimeout(upwordFadeTimeoutId);
+		upwordFadeTimeoutId = null;
+		clearTimeout(upwordClearFadeTimeoutId);
+		upwordClearFadeTimeoutId = null;
+
+		upwordFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.add("fadeoutclass");
+			}}, 3500);
+
+		upwordClearFadeTimeoutId = setTimeout(() => {
+			if (e.target.classList.contains("activeImage"))
+			{
+				e.target.classList.remove("fadeoutclass");
+			}
+		}, 5000);
+
+		upwordImageIndexIntervalId = setInterval(() => {
+		upwordImageIndex++;
+		let index = upwordImageIndex%numimages;
+			
+		upwordAltimages[index].style.display = "block";
+		upwordAltimages[((index-1) + numimages)%numimages].style.display = "none";
+
+		if (e.target.classList.contains("firstaltimage"))
+		{
+			e.target.classList.remove("firstaltimage");
+		}
+
+		}, 4500);
+	}
 }
 
 setTimeout(function () {
@@ -692,13 +887,13 @@ function showGamePlayer(event){
 	blocker.style.display = 'block';
 
 	let gameSrcString = '';
-	if (event.currentTarget.id === "oxygencaliber")
+	if (event.currentTarget.classList.contains("oxygencaliber"))
 		gameSrcString = oxygenCaliberSrc;
-	else if (event.currentTarget.id === "bazookacaverns")
+	else if (event.currentTarget.classList.contains("bazookacaverns"))
 		gameSrcString = bazookaCavernsSrc;
-	else if (event.currentTarget.id === "paradice")
+	else if (event.currentTarget.classList.contains("paradice"))
 		gameSrcString = paraDiceSrc;
-	else if (event.currentTarget.id === "upword")
+	else if (event.currentTarget.classList.contains("upword"))
 		gameSrcString = upWordSrc;
 
 	gamePlayerIFrame.setAttribute("src", gameSrcString);

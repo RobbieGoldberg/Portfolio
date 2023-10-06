@@ -17,7 +17,9 @@
 	</div>
 
 	<div class="mainwindow">
-		<h2>Check out my work</h2>
+		<h1>Check out my work</h1>
+		<h2>Hover for more info. Click to see visit external pages.</h2>
+		<br>
 		<div class="imagegroup1">
 			<div class="zoom infopopup">
 				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><div class="imgleft"><img src="images/saleblazers.jpg"></img></div></a>
@@ -30,36 +32,37 @@
 						as well as broadly-scoped bug fixes and optimizations affecting all systems in the game. In this role [...] skills in picking apart, refactoring, and fixing old code 
 						connecting many disparate systems touched by many different people over years of the game's development.
 					</div>
-
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><div class="imgmiddle"><img src="images/bloompunk.png"></img></div></a>
-				<div class="hidemiddletop">
+				<a target="_blank" rel="noopener noreferrer" href="https://uscgames.itch.io/bloompunk"><div class="imgright"><img src="images/bloompunk.png"></img></div></a>
+				<div class="hideright">
 					<div class="infopopuptitle">Bloompunk</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
+		</div>
+		<br><br>
+		<h2>Click to play in this webpage</h2>
+		<br>
+		<div class="imagegroup2">
 			<div class="zoom infopopup">
-				<div class="imgright"><img id="oxygencaliber" src="images/oxygen_caliber.png"></img></div>
-				<div class="hideright">
+				<div class="imgleft"><img id="oxygencaliber" src="images/oxygen_caliber.png"></img></div>
+				<div class="hideleft">
 					<div class="infopopuptitle">Oxygen Caliber</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="imagegroup2">
 			<div class="zoom infopopup">
-				<div class="imgleft"><img id="bazookacaverns" src="images/bazooka_caverns.png"></img></div>
-				<div class="hideleft">
+				<div class="imgright"><img id="bazookacaverns" src="images/bazooka_caverns.png"></img></div>
+				<div class="hideright">
 					<div class="infopopuptitle">Bazooka Caverns</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<div class="imgmiddle"><img id="paradice" src="images/par_a_dice.png"></img></div>
-				<div class="hidemiddlebottom">
+				<div class="imgleft"><img id="paradice" src="images/par_a_dice.png"></img></div>
+				<div class="hideleft">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Info</div>
 				</div>
@@ -73,6 +76,7 @@
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="gameplayer" id="gameplayer"><iframe id="gameplayeriframe" frameborder="0" src="" allowfullscreen=""><a href=""></a></iframe></div>
 
@@ -112,11 +116,11 @@
 	z-index: 999999;
 	display: none;
 
-	-webkit-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
-	-ms-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Internet Explorer */
-	-o-animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Opera < 12.1 */
-	animation: fadein 1s, 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom;
+	-webkit-animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-ms-animation: fadein 1s;
+	-o-animation: fadein 1s;
+	animation: fadein 1s;
 }
 
 .gameplayer.show{
@@ -147,13 +151,13 @@ a {
 	font-size: 20;
 }
 
-.hideleft, .hidemiddletop, .hidemiddlebottom, .hideright {
+.hideleft, .hideright {
 	padding: 12px;
 	display: none;
 	position: absolute;
 	top: -30%;
 	width: 150%;
-	background-color: #6669;
+	background-color: #666d;
 	border-radius: 16px;
 
 	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
@@ -168,22 +172,28 @@ a {
 	pointer-events: none;
 }
 
-.hideleft {
-	left: 160%;
+.imagegroup1 .hideleft {
+	left: 125%;
+	height: 150%;
+	width: 80%;
 }
-.hidemiddletop {
-	top: 143%;
-	left: -25%;
-}
-.hidemiddlebottom {
-	top: -90%;
-	left: -27%;
-}
-.hideright {
-	right: 160%;
+.imagegroup1 .hideright {
+	right: 125%;
+	height: 150%;
+	width: 80%;
 }
 
-.infopopup:hover .hideleft, .infopopup:hover .hidemiddletop, .infopopup:hover .hidemiddlebottom, .infopopup:hover .hideright {
+.imagegroup2 .hideleft {
+	left: 130%;
+	top: 20%;
+}
+
+.imagegroup2 .hideright {
+	right: 130%;
+	top: 20%;
+}
+
+.infopopup:hover .hideleft, .infopopup:hover .hideright {
   display: block;
   color: #ddd;
 }
@@ -195,16 +205,24 @@ img {
 	cursor: pointer;
 }
 
-.imgleft:hover img {
-	transform: scale(1.7) translate(10%, 0%);
+.imagegroup1 .zoom {
+	width: 48%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.imgmiddle:hover img {
-	transform: scale(1.7);
+.imagegroup2 .zoom {
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.imgright:hover img {
-	transform: scale(1.7) translate(-10%, 0%);
+.imagegroup1 .imgright:hover img, .imagegroup1 .imgleft:hover img {
+	transform: scale(1.3);
+}
+
+.imagegroup2 .imgright:hover img, .imagegroup2 .imgleft:hover img {
+	transform: scale(1.5);
 }
 
 .zoom {
@@ -223,6 +241,11 @@ img {
 	flex-direction: row;
 }
 
+.imagegroup2
+{
+	flex-wrap: wrap;
+}
+
 .imagegroup1 .zoom, .imagegroup2 .zoom {
 	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */
@@ -234,12 +257,12 @@ img {
 	animation-fill-mode: forwards;
 }
 
-.imagegroup1 .zoom:nth-child(1) { animation-delay: 1.4s }
-.imagegroup1 .zoom:nth-child(2) { animation-delay: 1.5s }
-.imagegroup1 .zoom:nth-child(3) { animation-delay: 1.6s }
-.imagegroup2 .zoom:nth-child(1) { animation-delay: 1.7s }
-.imagegroup2 .zoom:nth-child(2) { animation-delay: 1.8s }
-.imagegroup2 .zoom:nth-child(3) { animation-delay: 1.9s }
+.imagegroup1 .zoom:nth-child(1 of .zoom) { animation-delay: 1.4s }
+.imagegroup1 .zoom:nth-child(2 of .zoom) { animation-delay: 1.5s }
+.imagegroup2 .zoom:nth-child(1 of .zoom) { animation-delay: 1.6s }
+.imagegroup2 .zoom:nth-child(2 of .zoom) { animation-delay: 1.7s }
+.imagegroup2 .zoom:nth-child(3 of .zoom) { animation-delay: 1.8s }
+.imagegroup2 .zoom:nth-child(4 of .zoom) { animation-delay: 1.9s }
 
 .header {
 	font-family: "Poppins";
@@ -329,7 +352,7 @@ h2 {
 {
 	display: flex;
 	flex-direction: row;
-	width: 60%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -338,7 +361,7 @@ h2 {
 {
 	position: relative;
 	z-index: 0;
-	width: 42%;
+	width: 30%;
 	align-content: center;
 }
 
@@ -393,7 +416,7 @@ body {
   transition: 0.3s;
 }
 .dimImagesHover.imgHovered img {
-  opacity: 0.1;
+  opacity: 0.05;
 }
 .dimImagesHover img:hover {
   opacity: 1;
@@ -413,15 +436,13 @@ body {
 	right:0;
 	bottom:0;
 	z-index:9999;
+	transition: 0.4s;
 }
 
  .coloredblocker {
 	 background-color: #111d;
+	 transition: 0.4s;
  }
-
- .lockscreen {
-    overflow: hidden;
-}
 
 </style>
 
@@ -466,9 +487,8 @@ function showGamePlayer(event){
 	if (event.currentTarget.id === '') return;
 
 	gamePlayer.classList.add("show");
-	blocker.classList.add("coloredblocker");
+	setTimeout(() => {blocker.classList.add("coloredblocker")}, 0);
 	blocker.style.display = 'block';
-	body.classList.add("lockscreen");
 
 	let gameSrcString = '';
 	if (event.currentTarget.id === "oxygencaliber")
@@ -487,13 +507,11 @@ function resetGamePlayer(){
 	gamePlayer.classList.add("show");
 	blocker.classList.add("coloredblocker");
 	blocker.style.display = 'block';
-	body.classList.add("lockscreen");
 
 	gamePlayerIFrame.setAttribute("src", "bazookacaverns");
 	
-	body.classList.remove("lockscreen");
 	gamePlayer.classList.remove("show");
-	blocker.style.display = 'none';
+	setTimeout(() => {blocker.style.display = 'none'}, 400);
 	blocker.classList.remove("coloredblocker");
 }
 

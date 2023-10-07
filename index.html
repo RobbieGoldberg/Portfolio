@@ -172,19 +172,19 @@
 .altimg {
 	display: none;
 
-	-webkit-animation: fadein 1s;
-	-moz-animation: fadein 1s;
-	-ms-animation: fadein 1s;
-	-o-animation: fadein 1s;
-	animation: fadein 1s;
+	-webkit-animation: fadein 1.5s;
+	-moz-animation: fadein 1.5s;
+	-ms-animation: fadein 1.5s;
+	-o-animation: fadein 1.5s;
+	animation: fadein 1.5s;
 }
 
 .fadeoutclass {
-	-webkit-animation: fadeout 1s;
-	-moz-animation: fadeout 1s;
-	-ms-animation: fadeout 1s;
-	-o-animation: fadeout 1s;
-	animation: fadeout 1s;
+	-webkit-animation: fadeout 1.5s;
+	-moz-animation: fadeout 1.5s;
+	-ms-animation: fadeout 1.5s;
+	-o-animation: fadeout 1.5s;
+	animation: fadeout 1.5s;
 }
 
 .firstaltimage
@@ -671,7 +671,7 @@ for (var i = 0; i < elements.length; i++) {
 }
 
 let cycletime = 4500;
-let fadekickintime = cycletime - 500;
+let fadekickintime = cycletime - 1000;
 
 function cycleImages(e, game) {
 	e.target.classList.add("activeImage");

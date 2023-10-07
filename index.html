@@ -608,49 +608,52 @@ let upwordAltimages = document.querySelectorAll("#upword .altimg");
 let upwordFadeTimeoutId;
 
 for (var i = 0; i < elements.length; i++) {
-	elements[i].onmouseover = function( e ){
+	elements[i].onmouseover = function( e )
+	{
 		if(e.target.tagName == 'IMG'){
-		this.classList.add("imgHovered");
+			this.classList.add("imgHovered");
+			cycleImages(e, e.target.parentElement.id);
+		}
+	}
+	elements[i].onmouseout = function( e )
+	{
+		this.classList.remove("imgHovered");
+		e.target.classList.remove("fadeoutclass");
 
-		cycleImages(e, e.target.parentElement.id);
-    }
-  }
-  elements[i].onmouseout = function( e ){
-	if (!e.target.classList.contains("activeImage")) return;
-	e.target.classList.remove("activeImage");
-	e.target.classList.remove("fadeoutclass");
-	this.classList.remove("imgHovered");
+		//if (!e.target.classList.contains("activeImage")) return;
 
-	clearInterval(saleblazersImageIndexIntervalId);
-	saleblazersImageIndexIntervalId = null;
-	clearTimeout(saleblazersFadeTimeoutId);
-	saleblazersFadeTimeoutId = null;
+		e.target.classList.remove("activeImage");
 
-	clearInterval(bloompunkImageIndexIntervalId);
-	bloompunkImageIndexIntervalId = null;
-	clearTimeout(bloompunkFadeTimeoutId);
-	bloompunkFadeTimeoutId = null;
+		clearInterval(saleblazersImageIndexIntervalId);
+		saleblazersImageIndexIntervalId = null;
+		clearTimeout(saleblazersFadeTimeoutId);
+		saleblazersFadeTimeoutId = null;
 
-	clearInterval(oxygencaliberImageIndexIntervalId);
-	oxygencaliberImageIndexIntervalId = null;
-	clearTimeout(oxygencaliberFadeTimeoutId);
-	oxygencaliberFadeTimeoutId = null;
+		clearInterval(bloompunkImageIndexIntervalId);
+		bloompunkImageIndexIntervalId = null;
+		clearTimeout(bloompunkFadeTimeoutId);
+		bloompunkFadeTimeoutId = null;
 
-	clearInterval(bazookacavernsImageIndexIntervalId);
-	bazookacavernsImageIndexIntervalId = null;
-	clearTimeout(bazookacavernsFadeTimeoutId);
-	bazookacavernsFadeTimeoutId = null;
+		clearInterval(oxygencaliberImageIndexIntervalId);
+		oxygencaliberImageIndexIntervalId = null;
+		clearTimeout(oxygencaliberFadeTimeoutId);
+		oxygencaliberFadeTimeoutId = null;
 
-	clearInterval(paradiceImageIndexIntervalId);
-	paradiceImageIndexIntervalId = null;
-	clearTimeout(paradiceFadeTimeoutId);
-	paradiceFadeTimeoutId = null;
+		clearInterval(bazookacavernsImageIndexIntervalId);
+		bazookacavernsImageIndexIntervalId = null;
+		clearTimeout(bazookacavernsFadeTimeoutId);
+		bazookacavernsFadeTimeoutId = null;
 
-	clearInterval(upwordImageIndexIntervalId);
-	upwordImageIndexIntervalId = null;
-	clearTimeout(upwordFadeTimeoutId);
-	upwordFadeTimeoutId = null;
-  }
+		clearInterval(paradiceImageIndexIntervalId);
+		paradiceImageIndexIntervalId = null;
+		clearTimeout(paradiceFadeTimeoutId);
+		paradiceFadeTimeoutId = null;
+
+		clearInterval(upwordImageIndexIntervalId);
+		upwordImageIndexIntervalId = null;
+		clearTimeout(upwordFadeTimeoutId);
+		upwordFadeTimeoutId = null;
+	}
 }
 
 let cycletime = 4500;
@@ -667,7 +670,6 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-				console.log("fadeoutclass applied");
 			}}, fadekickintime);
 
 		saleblazersImageIndexIntervalId = setInterval(() => {
@@ -692,7 +694,6 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-				console.log("fadeoutclass applied");
 			}}, fadekickintime);
 
 		bloompunkImageIndexIntervalId = setInterval(() => {
@@ -717,7 +718,6 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-				console.log("fadeoutclass applied");
 			}}, fadekickintime);
 
 		oxygencaliberImageIndexIntervalId = setInterval(() => {
@@ -742,7 +742,6 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-				console.log("fadeoutclass applied");
 			}}, fadekickintime);
 
 		bazookacavernsImageIndexIntervalId = setInterval(() => {
@@ -767,7 +766,6 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-				console.log("fadeoutclass applied");
 			}}, fadekickintime);
 
 		paradiceImageIndexIntervalId = setInterval(() => {
@@ -792,7 +790,6 @@ function cycleImages(e, game) {
 			if (e.target.classList.contains("activeImage"))
 			{
 				e.target.classList.add("fadeoutclass");
-				console.log("fadeoutclass applied");
 			}}, fadekickintime);
 
 		upwordImageIndexIntervalId = setInterval(() => {

@@ -206,9 +206,10 @@
 
 .gameplayer {
 	position: fixed;
-	margin: 0 auto;
-	left: 24vw;
-	top: 12vh;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
 	overflow: hidden;
 	z-index: 999999;
 	display: none;
@@ -227,8 +228,8 @@
 
 iframe {
 	display: block;
-	min-width: 52vw;
-	min-height: 72vh;
+	min-width: 1000px;
+	min-height: 690px;
 }
 
 a {
@@ -240,12 +241,12 @@ a {
 
 .infopopuptitle
 {
-	font-size: 48;
+	font-size: 3vw;
 }
 
 .infopopupdescription
 {
-	font-size: 20;
+	font-size: 1vw;
 }
 
 .infopopupdescription.maintext
@@ -411,12 +412,12 @@ img {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 2.5vw;
 	transition: 0.3s;
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 1vw;
 	
 	-webkit-animation: fadein 1.5s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadein 1.5s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */

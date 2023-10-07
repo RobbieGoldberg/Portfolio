@@ -620,18 +620,36 @@ for (var i = 0; i < elements.length; i++) {
 	e.target.classList.remove("activeImage");
 	e.target.classList.remove("fadeoutclass");
 	this.classList.remove("imgHovered");
+
 	clearInterval(saleblazersImageIndexIntervalId);
 	saleblazersImageIndexIntervalId = null;
+	clearTimeout(saleblazersFadeTimeoutId);
+	saleblazersFadeTimeoutId = null;
+
 	clearInterval(bloompunkImageIndexIntervalId);
 	bloompunkImageIndexIntervalId = null;
+	clearTimeout(bloompunkFadeTimeoutId);
+	bloompunkFadeTimeoutId = null;
+
 	clearInterval(oxygencaliberImageIndexIntervalId);
 	oxygencaliberImageIndexIntervalId = null;
+	clearTimeout(oxygencaliberFadeTimeoutId);
+	oxygencaliberFadeTimeoutId = null;
+
 	clearInterval(bazookacavernsImageIndexIntervalId);
 	bazookacavernsImageIndexIntervalId = null;
+	clearTimeout(bazookacavernsFadeTimeoutId);
+	bazookacavernsFadeTimeoutId = null;
+
 	clearInterval(paradiceImageIndexIntervalId);
 	paradiceImageIndexIntervalId = null;
+	clearTimeout(paradiceFadeTimeoutId);
+	paradiceFadeTimeoutId = null;
+
 	clearInterval(upwordImageIndexIntervalId);
 	upwordImageIndexIntervalId = null;
+	clearTimeout(upwordFadeTimeoutId);
+	upwordFadeTimeoutId = null;
   }
 }
 

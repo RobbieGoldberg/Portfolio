@@ -634,7 +634,7 @@ for (var i = 0; i < elements.length; i++) {
 		console.log(e.target);
 		e.target.classList.remove("fadeoutclass");
 
-		//if (!e.target.classList.contains("activeImage")) return;
+		if (!e.target.classList.contains("activeImage")) return;
 
 		e.target.classList.remove("activeImage");
 

@@ -145,11 +145,15 @@
 	</div>
 	
 
-	<div class="gameplayer" id="gameplayer"><iframe id="gameplayeriframe" frameborder="0" src="" allowfullscreen=""><a href=""></a></iframe></div>
+	<div class="gameplayer" id="gameplayer">
+		<iframe id="gameplayeriframe" frameborder="0" src="" allowfullscreen=""><a href=""></a></iframe>
+	</div>
+	<div class="quitbutton" id="quitbutton"><h1>Quit Game</h1></div>
 
 	<div class ="secondarywindowcontainer">
 		<div class="secondarywindow">
 			<h1>Links</h1>
+			<h2><a a target="_blank" href="files/Robbie Goldberg Resume October 2023.pdf">Resume</a></h2>
 			<h2><a a target="_blank" href="https://www.linkedin.com/in/robbie-goldberg-4a3894233/">LinkedIn</a></h2>
 			<h2><a a target="_blank" href="mailto:RobbieGoldbergGameDev@gmail.com">Email me</a></h2>
 			<h2><a a target="_blank" href="https://robbiegoldberg.itch.io/">My itch.io page</a></h2>
@@ -201,7 +205,7 @@
 
 .gameplayer {
 	position: fixed;
-	margin:0 auto;
+	margin: 0 auto;
 	left: 24vw;
 	top: 12vh;
 	overflow: hidden;
@@ -222,8 +226,8 @@
 
 iframe {
 	display: block;
-	width: 52vw;
-	height: 72vh;
+	min-width: 52vw;
+	min-height: 72vh;
 }
 
 a {
@@ -381,7 +385,7 @@ img {
 .imagegroup2 .zoom:nth-child(3 of .zoom) { animation-delay: 1.8s }
 .imagegroup2 .zoom:nth-child(4 of .zoom) { animation-delay: 1.9s }
 
-.header {
+.header, .gameplayer.show + .quitbutton {
 	font-family: "Poppins";
 
 	text-align: center;
@@ -581,6 +585,30 @@ body {
 }
 .dimImagesHover.imgHovered .activeImage {
   opacity: 1;
+}
+
+.quitbutton {
+	display: none;
+	opacity: 0;
+}
+
+.gameplayer.show + .quitbutton {
+	display: block;
+	position: fixed;
+	top: 15%;
+	right: 10%;
+	width: 10%;
+	height: auto;
+	z-index: 999999;
+	opacity: 1;
+	background-color: #444;
+	cursor: pointer;
+	transition: 0.3s;
+	user-select: none;
+}
+
+.gameplayer.show + .quitbutton:hover {
+	background-color: #222;
 }
 
 </style>
@@ -882,4 +910,9 @@ function hideGamePlayer(){
 		resetGamePlayer();
 	}
 }
+
+let quitbutton = document.getElementById('quitbutton');
+quitbutton.onclick = hideGamePlayer;
+
+
 </script>

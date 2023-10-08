@@ -36,21 +36,24 @@
 					<div class="infopopupdescription">A multiplayer open-world shopkeeping survival game</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						[More about the game...]
-						<br><br>
 						At Airstrafe Interactive, I was a core gameplay engineer on <i>Saleblazers</i> leading up to and carrying through its early access release.
 						My contributions to the game included building new large-scale systems such as achievement unlocks and text localization, as well as
 						improving existing systems like music layer transitions, quest triggers, dialogue events, inventory flow, and networking behavior.
-						I also created new in-game items and machines with unique functionalities, like spellbook weapons and anvil stations.
+						I created new in-game items and machines with unique functionalities, like spellbook weapons and anvil stations.
+						<br><br>
+						<b>[Cut some of this...]</b> Another large facet of my work on this team involved creating tools for use by other engineers, designers, and artists.
+						One tool I built automatically tracked scene changes and provided easy access to re-bake navmesh, occlusion culling, and proxy data for scenes with relevant modifications.
+						This reduced overhead and time spent by designers and engineers who were previously keeping track of changes and manually re-baking assets on a per-scene basis.
+						Another tool I built could locate all dialogue databases and string tables in the project, export them to CSV, run them through machine translation,
+						and re-import them for localization. This provided a simple pipeline for designers to update assets with translations after writing new dialogue or other in-game text.
+						Lastly, I built a tool to locate and modify all materials in the project so that artists could easily and selectively apply modifications to many materials at once.
 						<br><br>
 						My work on this project also included broadly-scoped bug fixes and optimizations across all systems in the game.
-						In this role, I cultivated skills in analyzing, refactoring, and improving code left behind by other developers...
-						<br><br>
-						Lastly, another facet of my work here was tools programming. I built a tool to locate and modify all materials in the project...
-						I also built a tool to track scene changes and easily re-bake navmesh, occlusion culling, and proxy data for relevant scenes...
-						I built another tool to locate all dialogue databases and string tables in the project, export them to csv, translate them, and re-import them
-						for localization.
-					</div>
+						In this role, I cultivated skills in analyzing, refactoring, and improving code left behind by other developers.
+						In a game with such large scope and with so many interconnected systems, bugs were inevitably rampant. I learned to efficiently diagnose and fix bugs 
+						even within unmaintained systems often riddled with tech debt. In my time working on this project, I estimate that I fixed upwards of 100 miscellaneous
+						bugs, likely interacting with all in-game systems at one time or another.
+						</div>
 				</div>
 			</div>
 			<div class="zoom infopopup">
@@ -65,12 +68,13 @@
 					<div class="infopopupdescription">A first-person arena shooter roguelike</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						<i>Bloompunk</i> was a capstone project made at University of Southern California by a team of 30 students over two semesters. [More about the game...]
+						<i>Bloompunk</i> was a capstone project made at University of Southern California by a team of 30 students over two semesters. <b>[More about the game...]</b>
 						<br><br>
-						I implemented the core character controls, as well as the game's tutorial systems. I was also responsible for hooking up all the character animations created by the team's artists.
+						My primary responsibilities on this project were the core character controls and the tutorial systems. I was also responsible for hooking up all the character animations created by the team's artists.
 						The character controls were built on a state machine with seven states: idle, walking, sprinting, sliding, jumping, airborne, and mantling. The key challenges
-						I had to solve were in handling state transitions, both in terms of physics forces acting on the character and in terms of visually representing those state changes
-						with animation transitions and cancels...
+						I had to solve were in handling transitions between those states, both in terms of physics forces acting on the character and in terms of visually representing those state changes
+						with animation transitions and cancels. Working on this project sharpened my skills with Rigidbodies, collision logic, and general physics in a 3D gameplay environment.
+						First-person shooter controls were familiar to me as a player but not as a developer prior to this project.<b>[More...]</b>
 					</div>
 				</div>
 			</div>
@@ -92,8 +96,13 @@
 					<div class="infopopupdescription">Info</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						<i>Oxygen Caliber</i> was created by myself and one other developer, Andi Ren, in an intermediate game development course
-						at USC...
+						<i>Oxygen Caliber</i> was a student project created for an intermediate game development course at USC.
+						This project was the first where I really got my hands dirty with Unity and learned much of what I know about Unity's
+						physics systems. In this course, we began prototyping by trying to answer a question about a gameplay experience. My partner and I chose to explore the question
+						"Can a player successfully navigate a level using only recoil to move?" We liked the trajectory of the prototype, so we leaned into the physics mechanics.
+						We put the character in space, built the game around planets with gravity fields, and added a grappling hook mechanic. Our vision was to create
+						a movement system that felt smooth and easy to use but with high skill ceiling and a very large degree of freedom for players to get creative with.
+						<b>[More...]</b>
 					</div>
 				</div>
 			</div>
@@ -109,7 +118,7 @@
 					<div class="infopopupdescription">Info</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						<i>Bazooka Caverns</i> was created by myself and one other developer, Robert Jones, for a 72-hour game jam. The theme was...
+						I designed and developed <i>Bazooka Caverns</i> along with one other developer for <i>Itch.io’s Mini Jam 109: Depth(s)</i>. [...] a physics puzzle game in 72 hours. Placed top 11% among 152 entries. Primary responsibilities included game physics, collision logic, game state management, and audio implementation.
 					</div>
 				</div>
 			</div>
@@ -252,13 +261,13 @@ a {
 	text-align: left;
 }
 
-.hideleft, .hideright {
+.hideleft, .hideright, .hideleftmid , .hiderightmid {
+	width: 34vw;
+
 	padding: 12px;
 	display: none;
 	position: absolute;
-	top: -30%;
-	width: 150%;
-	background-color: #666d;
+	background-color: #4448;
 	border-radius: 16px;
 
 	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
@@ -275,31 +284,31 @@ a {
 
 .imagegroup1 .hideleft {
 	left: 125%;
-	width: 80%;
+	top: -12vh;
 }
 .imagegroup1 .hideright {
 	right: 125%;
-	width: 80%;
+	top: -12vh;
 }
 
 .imagegroup2 .hideleft {
 	left: 188%;
-	top: 20%;
+	top: -16vh;
 }
 
 .imagegroup2 .hideright {
 	right: 188%;
-	top: 20%;
+	top: -16vh;
 }
 
 .imagegroup2 .hideleftmid {
 	left: 166%;
-	top: 20%;
+	top: -16vh;
 }
 
 .imagegroup2 .hiderightmid {
 	right: 166%;
-	top: 20%;
+	top: -16vh;
 }
 
 .infopopup:hover .hideleft, .infopopup:hover .hideright {
@@ -389,7 +398,7 @@ img {
 	font-family: "Poppins";
 
 	text-align: center;
-	color: #ddd;
+	color: #ccc;
 	background-color: #111;
 	padding: 15px;
 	padding-bottom: 1.5%;
@@ -438,7 +447,7 @@ h2 {
 	font-family: "Poppins";
 
 	text-align: center;
-	color: #ddd;
+	color: #ccc;
 	background-color: #111;
 	padding-top: 15px;
 	border-radius: 15px;
@@ -611,6 +620,10 @@ body {
 	background-color: #222;
 }
 
+body.altcolor {
+	background-color: #111;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -659,11 +672,15 @@ for (var i = 0; i < elements.length; i++) {
 			this.classList.add("imgHovered");
 			e.target.classList.add("activeImage");
 			cycleImages(e, e.target.parentElement.id);
+			body.style.transition = '0.3s';
+			body.classList.add("altcolor");
 		}
 	}
 	elements[i].onmouseout = function( e )
 	{	
 		if (!e.target.classList.contains("activeImage")) return;
+
+		body.classList.remove("altcolor");
 
 		this.classList.remove("imgHovered");
 

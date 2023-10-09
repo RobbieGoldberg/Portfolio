@@ -32,26 +32,29 @@
 				</div></a>
 				<div class="hideleft">
 					<div class="infopopuptitle">Saleblazers</div>
-					<div class="infopopupdescription">A multiplayer open-world shopkeeping survival game</div>
+					<div class="infopopupdescription">Multiplayer open-world shopkeeping survival game</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						At Airstrafe Interactive, I was a core gameplay engineer on <i>Saleblazers</i> leading up to and carrying through its early access release.
-						My contributions to the game included building new large-scale systems such as achievement unlocks and text localization, as well as
+						My contributions to the game include building new large-scale systems such as achievement unlocks and text localization, as well as
 						improving existing systems like music layer transitions, quest triggers, dialogue events, inventory flow, and networking behavior.
-						I created new in-game items and machines with unique functionalities, like spellbook weapons and anvil stations.
+						I created new in-game items and machines with unique functionalities, like spellbook weapons with elemental projectiles and anvil stations
+						that increase item durability.
 						<br><br>
 						Another large facet of my work on this team involved creating tools for use by other engineers, designers, and artists.
-						One tool I built automatically tracked scene changes and provided easy access to re-bake navmesh, occlusion culling, and proxy data for scenes with relevant modifications.
+						One tool I built automatically tracked when scenes changed and provided easy access to re-bake navmesh, occlusion culling, and proxy data for scenes with relevant modifications.
 						This reduced overhead and time spent by designers and engineers who were previously keeping track of changes and manually re-baking assets on a per-scene basis.
-						Another tool I built could locate all dialogue databases and string tables in the project, export them to CSV, run them through machine translation,
+						One other tool I built could locate all dialogue databases and string tables in the project, export them to CSV, run them through machine translation,
 						and re-import them for localization. This provided a simple pipeline for designers to update assets with translations after writing new dialogue or other in-game text.
-						Lastly, I built a tool to locate and modify all materials in the project so that artists could easily and selectively apply modifications to many materials at once.
+						Another tool could locate and modify all materials in the project so that artists could easily and selectively apply modifications to many materials at once.
+						I wrote a system that allowed designers and artists to re-color the game's global fog on a zone-by-zone basis.
+						I wrote another sytem that allowed designers to selectively move fog during cutscenes so that locations being shown to the player
+						would not be obscured.
 						<br><br>
-						My work on this project also included broadly-scoped bug fixes and optimizations across all systems in the game.
+						My work on this project also included fixing bugs and optimizing across all systems in the game.
+						In a game with such large scope and with so many interconnected systems, bugs were inevitable.
 						In this role, I cultivated skills in analyzing, refactoring, and improving code left behind by other developers.
-						In a game with such large scope and with so many interconnected systems, bugs were inevitably rampant. I learned to efficiently diagnose and fix bugs 
-						even within unmaintained systems often riddled with tech debt. In my time working on this project, I estimate that I fixed upwards of 100 miscellaneous
-						bugs, likely interacting with all in-game systems at one time or another.
+						I learned to efficiently diagnose and fix bugs within systems that even other contemporary developers on the team were unfamiliar with.
 						</div>
 				</div>
 			</div>
@@ -64,7 +67,7 @@
 				</div></a>
 				<div class="hideright">
 					<div class="infopopuptitle">Bloompunk</div>
-					<div class="infopopupdescription">A first-person arena shooter roguelike</div>
+					<div class="infopopupdescription">Plant-themed first-person arena shooter roguelike</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						<i>Bloompunk</i> was a capstone project made at University of Southern California by a team of 30 students over two semesters. <b>[More about the game...]</b>
@@ -92,7 +95,7 @@
 				</div>
 				<div class="hideleft">
 					<div class="infopopuptitle">Oxygen Caliber</div>
-					<div class="infopopupdescription">Info</div>
+					<div class="infopopupdescription">Physics-based planetary puzzle platformer</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						<i>Oxygen Caliber</i> was a student project created for an intermediate game development course at USC.
@@ -101,7 +104,7 @@
 						"Can a player successfully navigate a level using only recoil to move?" We liked the trajectory of the prototype, so we leaned into the physics mechanics.
 						We put the character in space, built the game around planets with gravity fields, and added a grappling hook mechanic. Our vision was to create
 						a movement system that felt smooth and easy to use but with high skill ceiling and a very large degree of freedom for players to get creative with.
-						<b>[More...]</b>
+						The development of this game played a large part in solidifying my love of unique movement systems.
 					</div>
 				</div>
 			</div>
@@ -114,7 +117,7 @@
 				</div>
 				<div class="hideleft hideleftmid">
 					<div class="infopopuptitle">Bazooka Caverns</div>
-					<div class="infopopupdescription">Info</div>
+					<div class="infopopupdescription">Explosive physics-based block-breaker game</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						I designed and developed <i>Bazooka Caverns</i> along with one other developer for <i>Itch.io’s Mini Jam 109: Depth(s)</i>. [...] a physics puzzle game in 72 hours. Placed top 11% among 152 entries. Primary responsibilities included game physics, collision logic, game state management, and audio implementation.
@@ -128,7 +131,7 @@
 				</div>
 				<div class="hideright hiderightmid">
 					<div class="infopopuptitle">Par-a-Dice</div>
-					<div class="infopopupdescription">Info</div>
+					<div class="infopopupdescription">Chaotic dice-rolling minigolf game</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						<i>Par-a-dice</i> was created by myself and two other developers, Robert Jones and Tim Durbin, for a 48-hour game jam. The theme was...
@@ -143,7 +146,7 @@
 				</div>
 				<div class="hideright">
 					<div class="infopopuptitle">UpWord</div>
-					<div class="infopopupdescription">Info</div>
+					<div class="infopopupdescription">Unconventional word-building platformer</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						<i>UpWord</i> was created by myself and eleven other developers in an introductory mobile game development course at USC...
@@ -283,31 +286,31 @@ a {
 
 .imagegroup1 .hideleft {
 	left: 125%;
-	top: -12vh;
+	top: -14vh;
 }
 .imagegroup1 .hideright {
 	right: 125%;
-	top: -12vh;
+	top: -14vh;
 }
 
 .imagegroup2 .hideleft {
 	left: 188%;
-	top: -16vh;
+	top: -18vh;
 }
 
 .imagegroup2 .hideright {
 	right: 188%;
-	top: -16vh;
+	top: -18vh;
 }
 
 .imagegroup2 .hideleftmid {
 	left: 166%;
-	top: -16vh;
+	top: -18vh;
 }
 
 .imagegroup2 .hiderightmid {
 	right: 166%;
-	top: -16vh;
+	top: -18vh;
 }
 
 .infopopup:hover .hideleft, .infopopup:hover .hideright {

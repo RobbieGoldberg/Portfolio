@@ -78,24 +78,34 @@
 				</div>
 			</div>
 			<div class="zoom infopopup">
-				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/2284990/Oxygen_Caliber/"><div class="imgright" id="bloompunk">
-					<img class="altimg firstaltimage" src="images/bloompunk.png"></img>
-					<img class="altimg" src="images/bloompunk_1.png"></img>
-					<img class="altimg" src="images/bloompunk_2.png"></img>
-					<img class="altimg" src="images/bloompunk_3.png"></img>
+				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/2284990/Oxygen_Caliber/"><div class="imgleft" id="oxygencaliber">
+					<img class="altimg firstaltimage" src="images/oxygen_caliber.png"></img>
+					<img class="altimg" src="images/oxygen_caliber_5.jpg"></img>
+					<img class="altimg" src="images/oxygen_caliber_2.png"></img>
+					<img class="altimg" src="images/oxygen_caliber_1.png"></img>
+					<img class="altimg" src="images/oxygen_caliber_4.jpg"></img>
+					<img class="altimg" src="images/oxygen_caliber_3.jpg"></img>
 				</div></a>
-				<div class="hideright" style="top:-18vh">
+				<div class="hideleft" style="top:-18vh">
 					<div class="infopopuptitle">Oxygen Caliber</div>
-					<div class="infopopupdescription">XXX</div>
+					<div class="infopopupdescription">Physics-based planetary puzzle platformer</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						XXX
+						<i>Oxygen Caliber</i> was a student project created for an intermediate game development course at USC.
+						This project was the first where I really got my hands dirty with Unity and learned much of what I know about Unity's
+						physics systems. In this course, we began prototyping by trying to answer a question about a gameplay experience. My partner and I chose to explore the question
+						"Can a player successfully navigate a level using only recoil to move?" We liked the trajectory of the prototype, so we leaned into the physics mechanics.
+						We put the character in space, built the game around planets with gravity fields, and added a grappling hook mechanic. Our vision was to create
+						a movement system that felt smooth and easy to use but with a high skill ceiling and a large degree of freedom to give players room for creativity in their playstyle.
+						The development of this game played a large part in solidifying my love of unique movement systems.
 					</div>
 				</div>
 			</div>
+			<div class="zoom infopopup">
+			</div>
 		</div>
 		<br><br>
-		<h2>Click to play in this webpage (runs best with Hardware Acceleration enabled in browser settings)</h2>
+		<h2>Smaller Projects - Click to play in popup (runs best with Hardware Acceleration enabled in browser settings)</h2>
 		<div class="imagegroup2">
 			<div class="zoom infopopup">
 				<div class="imgleft" id="oxygencaliber">
@@ -394,13 +404,8 @@ img {
 .imagegroup1, .imagegroup2{
 	display: flex;
 	flex-direction: row;
-}
-
-.imagegroup2
-{
 	flex-wrap: wrap;
 }
-
 .imagegroup1 .zoom, .imagegroup2 .zoom {
 	-webkit-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadein 1s, 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 slideInFromBottom; /* Firefox < 16 */

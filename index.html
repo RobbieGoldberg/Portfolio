@@ -16,45 +16,36 @@
 		<div class="linklist">
 			<h2 class="linktext"><a target="_blank" href="files/Robbie Goldberg Resume October 2023.pdf">Resume</a></h2>
 			<h2 class="linktext"><a target="_blank" href="https://www.linkedin.com/in/robbie-goldberg-4a3894233/">LinkedIn</a></h2>
-			<h2 class="linktext"><a target="_blank" href="https://robbiegoldberg.itch.io/">itch.io</a></h2>
-			<h2 class="linktext"><a target="_blank" href="mailto:RobbieGoldbergGameDev@gmail.com">Email me</a></h2>
+			<h2 class="linktext"><a target="_blank" href="mailto:RobbieGoldbergGameDev@gmail.com">Email</a></h2>
 		</div>
 	</div>
 
 	<div class="mainwindow">
 		<h1 class="smallertitle">Shipped Games</h1>
+		<h2>Hover for more info</h2>
 		<h2>Click to visit Steam pages</h2>
 		<div class="imagegroup1">
 			<div class="zoom infopopup">
 				<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/app/1419850/Saleblazers/"><div class="imgleft" id="saleblazers">
 					<img class="altimg firstaltimage" src="images/saleblazers.jpg"></img>
 					<img class="altimg" src="images/saleblazers_1.jpg"></img>
-					<img class="altimg" src="images/saleblazers_5.png"></img>
 					<img class="altimg" src="images/saleblazers_2.jpg"></img>
 					<img class="altimg" src="images/saleblazers_7.png"></img>
 					<img class="altimg" src="images/saleblazers_3.jpg"></img>
 					<img class="altimg" src="images/saleblazers_6.png"></img>
 					<img class="altimg" src="images/saleblazers_4.jpg"></img>
 				</div></a>
-				<div class="hideleft" style="top:-26vh">
+				<div class="hideleft" style="top:-17vh">
 					<div class="infopopuptitle">Saleblazers</div>
 					<div class="infopopupdescription">Multiplayer open-world shopkeeping survival game</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						At Airstrafe Interactive, I was a core gameplay engineer on <i>Saleblazers</i> leading up to and carrying through its early access release.
-						My contributions to the game include building new large-scale systems such as achievement unlocks and text localization, as well as
-						improving existing systems like music layer transitions, quest triggers, dialogue events, inventory flow, and networking behavior.
+						My contributions to the game included creating new large-scale systems such as achievement unlocks and text localization, as well as
+						improvements to existing systems like music layer transitions, quest triggers, dialogue events, inventory flow, and networking behavior.
 						I created new in-game items and machines with unique functionalities, like spellbook weapons with elemental projectiles and anvil stations
-						that increase item durability.
-						<br><br>
-						Another large facet of my work on this team involved creating tools for use by other engineers, designers, and artists.
-						One tool I built automatically tracked scene changes and provided easy access to re-bake navmesh, occlusion culling, and proxy data for scenes with relevant modifications.
-						This reduced overhead and time spent by designers and engineers who were previously keeping track of changes and manually re-baking assets on a per-scene basis.
-						One other tool I built could locate all dialogue databases and string tables in the project, export them to CSV, run them through machine translation,
-						and re-import them for localization. This provided a simple pipeline for designers to update assets with translations after writing new dialogue or other in-game text.
-						Another tool located and selectively modified all materials in the project so that artists could easily apply changes to many materials at once.
-						Lastly, I wrote two systems to help designers and artists deal with in-game fog: one to re-color the game's global fog on a zone-by-zone basis
-						and one to move fog during cutscenes so that selective locations being shown to the player would not be obscured.
+						that provide permanent upgrades to equipment. Another large facet of my work on this team was the creation of tools for use by other engineers, designers, and artists.
+						I was also responsible for broadly-scoped bug fixes affecting all core systems in the game, fixing hundreds of miscellaneous bugs as we approached our early access release date.
 						</div>
 				</div>
 			</div>
@@ -65,17 +56,13 @@
 					<img class="altimg" src="images/bloompunk_2.png"></img>
 					<img class="altimg" src="images/bloompunk_3.png"></img>
 				</div></a>
-				<div class="hidemid" style="top:-18vh">
+				<div class="hidemid" style="top:-48vh">
 					<div class="infopopuptitle">Bloompunk</div>
 					<div class="infopopupdescription">Botanical first-person arena shooter roguelike</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						<i>Bloompunk</i> was a capstone project made at University of Southern California by a team of 30 students over two semesters.
-						Working on this game was the closest approximation to realistic industry work I had experienced before graduating. We had full design, art,
-						and audio teams, as well as dedicated producers to keep us on course. Being a programmer on this project was the first time in my game development career
-						that I felt both the weight of a large team relying on my work and the support of a large team working on a singular project together.
-						<br><br>
-						My primary responsibilities on this project were the core character controls and the game's tutorial systems. I was also responsible for hooking up all the character animations created by the team's artists.
+						<i>Bloompunk</i> is a capstone project made at University of Southern California by a team of 30 students over two semesters.
+						My primary responsibilities on this project were the core character controls and the game's tutorial systems. I was also responsible for hooking up the character animations created by the team's artists.
 						The character controls were built on a state machine with seven states: idle, walking, sprinting, sliding, jumping, airborne, and mantling. The key challenges
 						I had to solve were in handling transitions between those states, both in terms of the physical forces acting on the character and the animation state changes.
 						Working on this project sharpened my skills with Rigidbodies, collision logic, and general physics in a 3D gameplay environment.
@@ -97,10 +84,9 @@
 					<div class="infopopupdescription">Physics-based planetary puzzle platformer</div>
 					<br>
 					<div class="infopopupdescription maintext">
-						<i>Oxygen Caliber</i> was a student project created for an intermediate game development course at USC.
-						This project was the first where I really got my hands dirty with Unity and learned much of what I know about Unity's
-						physics systems. In this course, we began prototyping by trying to answer a question about a gameplay experience. My partner and I chose to explore the question
-						"Can a player successfully navigate a level using only recoil to move?" We liked the trajectory of the prototype, so we leaned into the physics mechanics.
+						<i>Oxygen Caliber</i> is a student project created for an intermediate game development course at USC by myself and one other classmate.
+						In this course, we were to begin prototyping by trying to answer a question about a gameplay experience. My partner and I chose to explore the question
+						"Can a player successfully navigate a level using only recoil to move?" We liked the trajectory of the prototype we created, so we leaned into the physics mechanics.
 						We put the character in space, built the game around planets with gravity fields, and added a grappling hook mechanic. Our vision was to create
 						a movement system that felt smooth and easy to use but with a high skill ceiling and a large degree of freedom to give players room for creativity in their playstyle.
 						The development of this game played a large part in solidifying my love of unique movement systems.
@@ -112,34 +98,6 @@
 		<h1 class="smallertitle">Smaller Projects</h1>
 		<h2>Click to play in popup (runs best with Hardware Acceleration enabled in browser settings)</h2>
 		<div class="imagegroup2">
-
-			<!--
-			<div class="zoom infopopup">
-				<div class="imgleft" id="oxygencaliber">
-					<img class="oxygencaliber altimg firstaltimage" id="oc1" src="images/oxygen_caliber.png"></img>
-					<img class="oxygencaliber altimg" id="oc6" src="images/oxygen_caliber_5.jpg"></img>
-					<img class="oxygencaliber altimg" id="oc3" src="images/oxygen_caliber_2.png"></img>
-					<img class="oxygencaliber altimg" id="oc2" src="images/oxygen_caliber_1.png"></img>
-					<img class="oxygencaliber altimg" id="oc5" src="images/oxygen_caliber_4.jpg"></img>
-					<img class="oxygencaliber altimg" id="oc4" src="images/oxygen_caliber_3.jpg"></img>
-				</div>
-				<div class="hideleft" style="top:-22vh">
-					<div class="infopopuptitle">Oxygen Caliber</div>
-					<div class="infopopupdescription">Physics-based planetary puzzle platformer</div>
-					<br>
-					<div class="infopopupdescription maintext">
-						<i>Oxygen Caliber</i> was a student project created for an intermediate game development course at USC.
-						This project was the first where I really got my hands dirty with Unity and learned much of what I know about Unity's
-						physics systems. In this course, we began prototyping by trying to answer a question about a gameplay experience. My partner and I chose to explore the question
-						"Can a player successfully navigate a level using only recoil to move?" We liked the trajectory of the prototype, so we leaned into the physics mechanics.
-						We put the character in space, built the game around planets with gravity fields, and added a grappling hook mechanic. Our vision was to create
-						a movement system that felt smooth and easy to use but with a high skill ceiling and a large degree of freedom to give players room for creativity in their playstyle.
-						The development of this game played a large part in solidifying my love of unique movement systems.
-					</div>
-				</div>
-			</div>
-			-->
-
 			<div class="zoom infopopup">
 				<div class="imgleft" id="bazookacaverns">
 					<img class="bazookacaverns altimg firstaltimage" id="bc1" src="images/bazooka_caverns.png"></img>
@@ -155,7 +113,7 @@
 						I designed and developed <i>Bazooka Caverns</i> in 72 hours along with one other developer for <i>Itch.io's Mini Jam 109: Depth(s)</i>.
 						<i>Itch.io</i>'s game jams always have a theme and a limitation; for this one, the theme was 'Depths' and the limitation was 'Health as a resource'.
 						We created this physics-based brick-breaker puzzle game and placed top 11% among 152 entries. In <i>Bazooka Caverns</i>, the player's goal is
-						to shoot bombs, break through blocks, and destroy a scorpion nest at the bottom of each level. The player can choose to spend health to increase
+						to shoot bombs, break through blocks, and destroy a scorpion nest at the bottom of each level. The player can spend health to increase
 						the size and explosion radius of bombs, creating a dimension of strategy when planning how to best clear a level.
 						My primary responsibilities on this project included game physics, collision logic, game state management, and audio implementation.
 					</div>
@@ -166,7 +124,7 @@
 					<img class="paradice altimg firstaltimage" id="pd1" src="images/par_a_dice.png"></img>
 					<img class="paradice altimg" id="pd2" src="images/paradice_1.png"></img>
 				</div>
-				<div class="hidemid" style="top:-20vh">
+				<div class="hidemid" style="top:-55vh">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Chaotic dice-rolling minigolf game</div>
 					<br>
@@ -177,8 +135,8 @@
 						the power of the next hit. I was responsible for the D20-ball's physics, the player controls, and audio implementation.
 						The biggest challenge I faced was in dealing with the realistic rolling physics of a D20. When a D20 is smacked around with high velocity,
 						its roll is very chaotic and irregular. We chose to circumvent this by treating the ball as a sphere until it reaches a low enough speed
-						and then swapping its collider for a realistic D20's. This way, the die's random rolling is meaningfully utilized,
-						but the outcomes of a player's actions are still predictable enough for them to make choices.
+						and then swapping its collider for a realistic D20's. This way, the die's physically random rolling is meaningfully utilized,
+						but the outcomes of a player's actions are still predictable enough for them to make choices when hitting the ball.
 					</div>
 				</div>
 			</div>
@@ -188,18 +146,17 @@
 					<img class="upword altimg" id="uw2" src="images/upword_1.png"></img>
 					<img class="upword altimg" id="uw3" src="images/upword_2.png"></img>
 				</div>
-				<div class="hideright" style="top:-20vh">
+				<div class="hideright" style="top:-23vh">
 					<div class="infopopuptitle">UpWord</div>
 					<div class="infopopupdescription">Unconventional word-building platformer</div>
 					<br>
 					<div class="infopopupdescription maintext">
 						In an introductory mobile game development course at USC, I and eleven other developers created <i>UpWord</i> over one summer.
-						Our goal was to mix together two of our favorite genres, word games and platformers. We dealt with some
+						Our goal was to mix two of our favorite genres, word games and platformers. We dealt with some
 						difficult design challenges on this project. We had trouble getting players to understand the objective of the game and the mechanics of submitting
-						and clearing words. We struggled to hit the right blend of randomized letters and intentionally-sequenced letters
-						so the player can actually spell words but still has a choice in what letters to collect. We also had issues with the balance of roles among the team; we had 11 programmers, 1 artist/programmer, and 0 dedicated
+						and clearing words. We struggled to hit the right blend of randomized letters and intentionally-sequenced letters. We also had issues with the balance of roles among the team; we had 11 programmers, 1 artist/programmer, and 0 dedicated
 						designers, producers, audio engineers, etc. This meant all of us ended up being partial designers, and the collective image of the final product
-						became muddy and unclear. My contributions to this project included word verification logic, game physics, audio implementation, and team management.
+						became muddy and unclear. But I am still proud of this project as a milestone in my education. My contributions to this project included word verification logic, game physics, audio implementation, and team management.
 					</div>
 				</div>
 			</div>
@@ -335,10 +292,13 @@ a {
 }
 
 .imagegroup1 .hideleft {
-	left: 125%;
+	left: 150%;
 }
 .imagegroup1 .hideright {
-	right: 125%;
+	right: 150%;
+}
+.imagegroup1 .hidemid {
+	left: -115%;
 }
 
 .imagegroup2 .hideleft {
@@ -347,9 +307,12 @@ a {
 .imagegroup2 .hideright {
 	right: 188%;
 }
+.imagegroup2 .hidemid {
+	left: -160%;
+}
 
 .hidemid {
-	right: 188%;
+	width: 80vw;
 }
 
 .infopopup:hover .hideleft, .infopopup:hover .hideright, .infopopup:hover .hidemid {
@@ -480,8 +443,9 @@ h2 {
 }
 
 .linktext {
-	margin-left: 2vw;
-	margin-right: 2vw;
+	font-size: 0.8vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 	margin-bottom: 0;
 }
 
@@ -618,7 +582,7 @@ body {
 }
 .dimImagesHover.imgHovered h2, .dimImagesHover.imgHovered h1, .dimImagesHover.imgHovered a {
   transition: 0.2s;
-  color: #222;
+  color: #111;
 }
 
 #blocker{

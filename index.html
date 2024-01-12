@@ -35,7 +35,7 @@
 					<img class="altimg" src="images/saleblazers_6.png"></img>
 					<img class="altimg" src="images/saleblazers_4.jpg"></img>
 				</div></a>
-				<div class="hideleft" style="top:-17vh">
+				<div class="hidemid">
 					<div class="infopopuptitle">Saleblazers</div>
 					<div class="infopopupdescription">Multiplayer open-world shopkeeping survival game</div>
 					<br>
@@ -56,7 +56,7 @@
 					<img class="altimg" src="images/bloompunk_2.png"></img>
 					<img class="altimg" src="images/bloompunk_3.png"></img>
 				</div></a>
-				<div class="hidemid" style="top:-48vh">
+				<div class="hidemid" style="left: -110%">
 					<div class="infopopuptitle">Bloompunk</div>
 					<div class="infopopupdescription">Botanical first-person arena shooter roguelike</div>
 					<br>
@@ -79,7 +79,7 @@
 					<img class="altimg" src="images/oxygen_caliber_4.jpg"></img>
 					<img class="altimg" src="images/oxygen_caliber_3.jpg"></img>
 				</div></a>
-				<div class="hideright" style="top:-18vh">
+				<div class="hidemid" style="left: -220%">
 					<div class="infopopuptitle">Oxygen Caliber</div>
 					<div class="infopopupdescription">Physics-based planetary puzzle platformer</div>
 					<br>
@@ -105,7 +105,7 @@
 					<img class="bazookacaverns altimg" id="bc2" src="images/bazooka_caverns_2.png"></img>
 					<img class="bazookacaverns altimg" id="bc3" src="images/bazooka_caverns_3.png"></img>
 				</div>
-				<div class="hideleft" style="top:-18vh">
+				<div class="hidemid" style="left: -20%">
 					<div class="infopopuptitle">Bazooka Caverns</div>
 					<div class="infopopupdescription">Explosive physics-based block-breaker game</div>
 					<br>
@@ -124,7 +124,7 @@
 					<img class="paradice altimg firstaltimage" id="pd1" src="images/par_a_dice.png"></img>
 					<img class="paradice altimg" id="pd2" src="images/paradice_1.png"></img>
 				</div>
-				<div class="hidemid" style="top:-55vh">
+				<div class="hidemid" style="left: -165%">
 					<div class="infopopuptitle">Par-a-Dice</div>
 					<div class="infopopupdescription">Chaotic dice-rolling minigolf game</div>
 					<br>
@@ -146,7 +146,7 @@
 					<img class="upword altimg" id="uw2" src="images/upword_1.png"></img>
 					<img class="upword altimg" id="uw3" src="images/upword_2.png"></img>
 				</div>
-				<div class="hideright" style="top:-23vh">
+				<div class="hidemid" style="left: -310%">
 					<div class="infopopuptitle">UpWord</div>
 					<div class="infopopupdescription">Unconventional word-building platformer</div>
 					<br>
@@ -297,9 +297,6 @@ a {
 .imagegroup1 .hideright {
 	right: 150%;
 }
-.imagegroup1 .hidemid {
-	left: -115%;
-}
 
 .imagegroup2 .hideleft {
 	left: 188%;
@@ -307,12 +304,14 @@ a {
 .imagegroup2 .hideright {
 	right: 188%;
 }
-.imagegroup2 .hidemid {
-	left: -160%;
-}
 
-.hidemid {
+.imagegroup1 .hidemid {
 	width: 80vw;
+	top: -175%;
+}
+.imagegroup2 .hidemid {
+	width: 80vw;
+	top: -235%;
 }
 
 .infopopup:hover .hideleft, .infopopup:hover .hideright, .infopopup:hover .hidemid {
@@ -741,7 +740,7 @@ let fadekickintime = cycletime - 1000;
 function cycleImages(e, game) {
 	if (game === "saleblazers")
 	{
-		let numimages = 8;
+		let numimages = 7;
 
 		saleblazersFadeTimeoutId = setTimeout(() => {
 			if (e.target.classList.contains("activeImage"))
